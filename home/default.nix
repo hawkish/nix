@@ -1,0 +1,5 @@
+{
+  nixos = [
+    ./profiles/nixos.nix
+  ];
+}
