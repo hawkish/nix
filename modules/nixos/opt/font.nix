@@ -1,4 +1,4 @@
 { pkgs, ... }:
 {
-  fonts.packages = [ pkgs.fira-code ];
+  fonts.packages = [ pkgs.nerd-fonts.fira-code ];
 }
