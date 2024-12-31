@@ -2,7 +2,7 @@
 {
   users.users."mortenhogh" = {
     isSystemUser = true;
-    uid = 511;
+    uid = 1000;
     home = "/home/mortenhogh";
     extraGroups = [ "networkmanager" "wheel" ];
 
