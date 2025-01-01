@@ -16,6 +16,8 @@
     yq
     ripgrep
 
+    lazygit
+
     self.packages.${pkgs.system}.nvim
   ];
 }
