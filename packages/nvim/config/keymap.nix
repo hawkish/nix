@@ -72,6 +72,7 @@
         desc = "+git";
       };
     }
+
     {
       mode = "n";
       key = "<leader>u";

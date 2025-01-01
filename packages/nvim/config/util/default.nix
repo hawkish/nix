@@ -5,9 +5,9 @@
     ./flash.nix
     ./grapple.nix
     ./kulala.nix
-    ./neogit.nix
     ./octo.nix
     ./telescope.nix
     ./todo-commnets.nix
+    ./lazygit.nix
   ];
 }
