@@ -51,8 +51,10 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
+    model = "pc104";
     layout = "gb";
     variant = "mac";
+    options = "terminatwe:ctrl_alt_bksp";
   };
 
   # Configure console keymap
