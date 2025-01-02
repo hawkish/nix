@@ -9,5 +9,6 @@
     ./telescope.nix
     ./todo-commnets.nix
     ./lazygit.nix
+    ./toggleterm.nix
   ];
 }
