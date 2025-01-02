@@ -83,7 +83,7 @@
     in
     {
       macbookpro = mkHost {
-        hostname = "Mortens-MacBook-Pro";
+        hostname = "MacBookPro";
         user = "mortenhogh";
       };
     };
