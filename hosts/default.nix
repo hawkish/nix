@@ -82,7 +82,7 @@
         };
     in
     {
-      rune-mac = mkHost {
+      macbookpro = mkHost {
         hostname = "MacBookPro";
         user = "mortenhogh";
       };
