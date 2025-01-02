@@ -1,2 +1,3 @@
 {
+  programs.zsh.enable = true;
 }
