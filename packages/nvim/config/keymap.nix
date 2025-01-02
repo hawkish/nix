@@ -2,6 +2,26 @@
   globals.mapleader = " ";
 
   keymaps = [
+
+    # Search/Replace
+    {
+      mode = "n";
+      key = "<leader>r";
+      action = ":%s:::c<left><left><left>";
+      options = {
+        desc = "Replace";
+      };
+    }
+
+    {
+      mode = "v";
+      key = "<leader>r";
+      action = "sy:%s:<c-r>s::c<left><left>";
+      options = {
+        desc = "Replace";
+      };
+    }
+
     # Clear search
     {
       mode = "n";
