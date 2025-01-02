@@ -4,6 +4,9 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
+    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -21,6 +24,7 @@
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
+        "aarch64-darwin"
       ];
 
       imports = [
