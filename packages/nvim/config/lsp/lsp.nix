@@ -47,6 +47,7 @@ in
         };
         eslint.enable = true;
         sqls.enable = true;
+        clojure_lsp = true;
         kotlin_language_server.enable = true;
         gradle_ls = {
           enable = true;
