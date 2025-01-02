@@ -3,5 +3,5 @@
   ...
 }:
 {
-  nixpkgs.hostPlatform = lib.mkDefault "aarch64-darwin";
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-darwin";
 }
