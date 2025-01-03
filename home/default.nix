@@ -1,7 +1,7 @@
 {
-  # nixos = [
-  #  ./profiles/nixos.nix
-  #];
+  nixos = [
+    ./profiles/nixos.nix
+  ];
   macbookpro = [
     ./profiles/macbookpro.nix
   ];
