@@ -83,7 +83,7 @@
     in
     {
       macbookpro = mkHost {
-        hostname = "MacBookPro.lan";
+        hostname = "MacBookPro";
         user = "mortenhogh";
       };
     };
