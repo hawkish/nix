@@ -64,8 +64,6 @@
         }:
         darwinSystem {
           inherit specialArgs;
-          system.stateVersion = 5;
-          system.configurationRevision = self.rev or self.dirtyRev or null;
 
           modules = default ++ [
             ./${hostname}
