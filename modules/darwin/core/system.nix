@@ -3,8 +3,6 @@
   system = {
     stateVersion = 5;
     configurationRevision = self.rev or self.dirtyRev or null;
-    keyboard = {
-    };
     defaults = {
       finder.AppleShowAllExtensions = true;
       finder.FXPreferredViewStyle = "clmv";
