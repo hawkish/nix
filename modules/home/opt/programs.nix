@@ -10,6 +10,9 @@
       nix-direnv.enable = true;
       silent = true;
     };
-    java.enable = true;
+    java = {
+      enable = true;
+      package = pkgs.jdk23;
+    };
   };
 }
