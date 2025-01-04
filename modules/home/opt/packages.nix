@@ -5,6 +5,7 @@
     nodejs
     node2nix
     python3
+    jdk23
 
     btop
     dig
