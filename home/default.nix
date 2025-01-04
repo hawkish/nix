@@ -2,7 +2,7 @@
   nixos = [
     ./profiles/nixos.nix
   ];
-  macbookpro = [
-    ./profiles/macbookpro.nix
+  mini = [
+    ./profiles/mini.nix
   ];
 }

@@ -83,8 +83,8 @@
         };
     in
     {
-      macbookpro = mkHost {
-        hostname = "MacBookPro";
+      mini = mkHost {
+        hostname = "mini";
         user = "mortenhogh";
       };
     };
