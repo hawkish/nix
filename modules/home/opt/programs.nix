@@ -10,5 +10,6 @@
       nix-direnv.enable = true;
       silent = true;
     };
+    java.enable = true;
   };
 }
