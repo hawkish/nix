@@ -22,7 +22,7 @@
         grp = "git remote prune origin";
         gp = "git push";
       };
-      ohMyZsh = {
+      oh-my-zsh = {
         enable = true;
         plugins = [
           "git"
