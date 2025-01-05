@@ -5,15 +5,7 @@
     settings = {
       skip_confirm_for_simple_edits = true;
       view_options = {
-        is_hidden_file.__raw = # Lua
-          ''
-            function(name)
-              return name == ".." or name == ".git"
-            end
-          '';
-      };
-      view_options = {
-        show_hidden = false;
+        show_hidden = true;
       };
       win_options = {
         signcolumn = "yes:2";
