@@ -44,8 +44,5 @@
       enable = true;
       package = pkgs.jdk23;
     };
-    firefox = {
-      enable = true;
-    };
   };
 }

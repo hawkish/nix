@@ -17,7 +17,6 @@
     ripgrep
 
     lazygit
-    firefox
 
     self.packages.${pkgs.system}.nvim
   ];
