@@ -6,6 +6,7 @@
     ./grapple.nix
     ./kulala.nix
     ./octo.nix
+    ./oil.nix
     ./telescope.nix
     ./todo-commnets.nix
     ./lazygit.nix
