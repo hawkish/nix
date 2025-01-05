@@ -28,6 +28,7 @@
               if user != null then
                 {
                   home-manager = {
+                    useUserPackages = true;
                     users.${user}.imports = homeImports.${hostname};
                     extraSpecialArgs = specialArgs;
                   };
