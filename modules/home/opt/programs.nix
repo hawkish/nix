@@ -5,10 +5,8 @@
 {
   programs = {
     home-manager.enable = true;
-    direnv = {
+    zsh = {
       enable = true;
-      nix-direnv.enable = true;
-      silent = true;
     };
     git = {
       enable = true;
