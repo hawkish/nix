@@ -3,6 +3,6 @@
   environment.systemPackages = with pkgs; [
     git
     p7zip
-    firefox
+    # firefox is broken in darwin(!)
   ];
 }
