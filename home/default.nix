@@ -5,4 +5,7 @@
   mini = [
     ./profiles/mini.nix
   ];
+  laptop = [
+    ./profiles/laptop.nix
+  ];
 }
