@@ -87,6 +87,9 @@
         hostname = "mini";
         user = "mortenhogh";
       };
+      laptop = mkHost {
+        hostname = "laptop";
+        user = "mortenhogh";
+      };
     };
-
 }
