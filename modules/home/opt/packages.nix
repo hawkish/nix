@@ -18,6 +18,8 @@
 
     lazygit
 
+    brave
+
     self.packages.${pkgs.system}.nvim
   ];
 }
