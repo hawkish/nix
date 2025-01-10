@@ -4,5 +4,7 @@
     git
     p7zip
     brave
+    clojure
+    babashka
   ];
 }
