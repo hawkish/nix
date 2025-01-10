@@ -4,6 +4,7 @@
     git
     p7zip
     brave
+    jdk23
     clojure
     babashka
   ];
