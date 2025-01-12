@@ -4,7 +4,7 @@
     suggestion = {
       enabled = true;
       autoTrigger = true;
-      keymap.accept = <S-CR>;
+      keymap.accept = "<S-CR>";
     };
     panel.enabled = false;
   };
