@@ -7,14 +7,13 @@
     };
     panel.enabled = false;
   };
-
   extraConfigLua = # Lua
     ''
       require("copilot").setup({
         auto_trigger = true,
         hide_during_completion = false,
         keymap = {
-          accept = "<TAB>",
+          accept = "<S-CR>",
         },
         panel = { enabled = false },
       })
