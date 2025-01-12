@@ -4,6 +4,7 @@
     suggestion = {
       enabled = true;
       autoTrigger = true;
+      keymap.accept = <S-CR>;
     };
     panel.enabled = false;
   };
@@ -13,7 +14,7 @@
         auto_trigger = true,
         hide_during_completion = false,
         keymap = {
-          accept = "<CR>",
+          accept = "<S-CR>",
         },
         panel = { enabled = false },
       })
