@@ -3,12 +3,125 @@
 
   keymaps = [
 
+    # Copilot
     {
       mode = "n";
       key = "<leader>cc";
       action = "<cmd>CopilotChatToggle<cr>";
       options = {
-        desc = "Copilot chat";
+        desc = "Copilot Chat";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>cf";
+      action = "<cmd>CopilotChatFix<cr>";
+      options = {
+        desc = "Copilot Fix";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>cr";
+      action = "<cmd>CopilotChatExplain<cr>";
+      options = {
+        desc = "Copilot Explain";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>cr";
+      action = "<cmd>CopilotChatReview<cr>";
+      options = {
+        desc = "Copilot Review";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>co";
+      action = "<cmd>CopilotChatOptimize<cr>";
+      options = {
+        desc = "Copilot Optimize";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>cd";
+      action = "<cmd>CopilotChatDocs<cr>";
+      options = {
+        desc = "Copilot Docs";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ct";
+      action = "<cmd>CopilotChatTests<cr>";
+      options = {
+        desc = "Copilot Tests";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>cx";
+      action = "<cmd>CopilotChatFixDiagnostic<cr>";
+      options = {
+        desc = "Copilot Fix diagnostic";
+      };
+    }
+    {
+      mode = "v";
+      key = "<leader>cf";
+      action = "<cmd>'<,'>CopilotChatFix<cr>";
+      options = {
+        desc = "Copilot Fix";
+      };
+    }
+    {
+      mode = "v";
+      key = "<leader>ce";
+      action = "<cmd>'<,'>CopilotChatExplain<cr>";
+      options = {
+        desc = "Copilot Explain";
+      };
+    }
+    {
+      mode = "v";
+      key = "<leader>cr";
+      action = "<cmd>'<,'>CopilotChatReview<cr>";
+      options = {
+        desc = "Copilot Review";
+      };
+    }
+    {
+      mode = "v";
+      key = "<leader>co";
+      action = "<cmd>'<,'>CopilotChatOptimize<cr>";
+      options = {
+        desc = "Copilot Optimize";
+      };
+    }
+    {
+      mode = "v";
+      key = "<leader>cd";
+      action = "<cmd>'<,'>CopilotChatDocs<cr>";
+      options = {
+        desc = "Copilot Docs";
+      };
+    }
+    {
+      mode = "v";
+      key = "<leader>ct";
+      action = "<cmd>'<,'>CopilotChatTests<cr>";
+      options = {
+        desc = "Copilot Tests";
+      };
+    }
+    {
+      mode = "v";
+      key = "<leader>cx";
+      action = "<cmd>'<,'>CopilotChatFixDiagnostic<cr>";
+      options = {
+        desc = "Copilot Fix diagnostic";
       };
     }
 
