@@ -14,7 +14,7 @@
         auto_trigger = true,
         hide_during_completion = false,
         keymap = {
-          accept = "<S-CR>",
+          accept = "<TAB>",
         },
         panel = { enabled = false },
       })
