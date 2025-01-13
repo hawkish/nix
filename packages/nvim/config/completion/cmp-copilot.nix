@@ -17,7 +17,7 @@
         enabled = true;
         auto_trigger = true;
         hide_during_completion = false;
-        keymap.accept = "<S-S>";
+        keymap.accept = "<CR>";
       };
       panel.enabled = false;
     };
