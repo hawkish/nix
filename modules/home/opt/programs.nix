@@ -40,5 +40,8 @@
       userEmail = "mortenhogh@gmail.com";
       userName = "hawkish";
     };
+    alacritty = {
+      enable = true;
+    };
   };
 }
