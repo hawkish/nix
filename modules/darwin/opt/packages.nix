@@ -6,5 +6,6 @@
     jdk23
     clojure
     babashka
+    alacritty
   ];
 }
