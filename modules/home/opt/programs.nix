@@ -53,7 +53,7 @@
           save_to_clipboard = true;
         };
 
-        shell = {
+        terminal-shell = {
           program = "${pkgs.zsh}/bin/zsh";
         };
 
