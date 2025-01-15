@@ -53,8 +53,9 @@
           save_to_clipboard = true;
         };
 
-        terminal-shell = {
+        terminal.shell = {
           program = "${pkgs.zsh}/bin/zsh";
+          args = [ "-l" ];
         };
 
         keyboard.bindings = [
