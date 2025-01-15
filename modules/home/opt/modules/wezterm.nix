@@ -7,6 +7,7 @@
   programs = {
     wezterm = {
       enable = true;
+      enableZshIntegration = true;
       colorSchemes = {
         enur = {
           foreground = "#FFFFFF";
@@ -44,12 +45,14 @@
       extraConfig = # Lua
         ''
           local wezterm = require 'wezterm';
-          return {
-            color_scheme = "enur",
-            font = wezterm.font("JetBrainsMono Nerd Font Mono"),
-            font_size = 10.0,
-            window_decorations = "TITLE | RESIZE",
-          }
+          local config = webterm.config_builder()
+
+          config.color_scheme = "enur"
+          config.font = wezterm.font "JetBrainsMono Nerd Font Mono"
+          config.font_size = 10.0
+          config.window_decorations = "TITLE | RESIZE"
+          return config
+
         '';
     };
   };
