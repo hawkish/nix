@@ -63,13 +63,13 @@
           {
             key = "Return";
             mods = "Shift";
-            action = "\u001B[13;2u";
+            action = "\\u001B[13;2u";
           }
 
           {
             key = "Return";
             mods = "Control";
-            action = "\u001B[13;5u";
+            action = "\\u001B[13;5u";
           }
 
           # ⌘ + enter puts window in macOS full screen
