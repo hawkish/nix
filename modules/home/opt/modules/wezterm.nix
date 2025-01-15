@@ -7,8 +7,6 @@
   programs = {
     wezterm = {
       enable = true;
-      font = "JetBrainsMono Nerd Font";
-      font_size = 10;
       colorSchemes = {
         enur = {
           foreground = "#FFFFFF";
@@ -45,8 +43,11 @@
       };
       extraConfig = # Lua
         ''
+          local wezterm = require 'wezterm';
           return {
             color_scheme = "enur",
+            font = wezterm.font("JetBrainsMono Nerd Font Mono"),
+            font_size = 10.0,
           }
         '';
     };
