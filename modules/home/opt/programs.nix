@@ -43,8 +43,6 @@
     alacritty = {
       enable = true;
       settings = {
-        live_config_reload = true;
-
         cursor = {
           style = "Beam";
           unfocused_hollow = false;
