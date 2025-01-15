@@ -7,7 +7,6 @@
   programs = {
     wezterm = {
       enable = true;
-      window_decorations = "TITLE | RESIZE";
       colorSchemes = {
         enur = {
           foreground = "#FFFFFF";
@@ -49,6 +48,7 @@
             color_scheme = "enur",
             font = wezterm.font("JetBrainsMono Nerd Font Mono"),
             font_size = 10.0,
+            window_decorations = "TITLE | RESIZE",
           }
         '';
     };
