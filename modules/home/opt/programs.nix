@@ -58,7 +58,28 @@
           args = [ "-l" ];
         };
 
+        font = {
+          normal = {
+            family = "JetBrainsMono Nerd Font Mono";
+            style = "Regular";
+          };
+          italic = {
+            family = "JetBrainsMono Nerd Font Mono";
+            style = "Italic";
+          };
+          bold_italic = {
+            family = "JetBrainsMono Nerd Font Mono";
+            style = "Italic";
+          };
+          bold = {
+            family = "JetBrainsMono Nerd Font Mono";
+            style = "Bold";
+          };
+          size = 10.0;
+        };
+
         keyboard.bindings = [
+          # Fix Copilot shortcut
           {
             key = "Return";
             mods = "Shift";
@@ -134,7 +155,6 @@
             chars = "\\u0002z";
           }
         ];
-
       };
     };
   };
