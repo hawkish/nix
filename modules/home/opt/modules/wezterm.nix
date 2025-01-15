@@ -45,7 +45,7 @@
       extraConfig = # Lua
         ''
           local wezterm = require 'wezterm';
-          local config = webterm.config_builder()
+          local config = wezterm.config_builder()
 
           config.color_scheme = "enur"
           config.font = wezterm.font "JetBrainsMono Nerd Font Mono"
