@@ -7,6 +7,7 @@
   programs = {
     wezterm = {
       enable = true;
+      window_decorations = "TITLE | RESIZE";
       colorSchemes = {
         enur = {
           foreground = "#FFFFFF";
