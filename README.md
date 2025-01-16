@@ -12,7 +12,7 @@ Use the NixOS installer for Linux. It is available [here](https://nixos.org/down
 nix run nix-darwin -- switch --flake .
 ```
 
-## Install the NIX flakes on Linux
+## Install the NIX flakes on NixOS
 
 ```bash
 nixos-rebuild switch
