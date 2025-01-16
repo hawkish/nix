@@ -47,7 +47,7 @@
           local wezterm = require 'wezterm';
           local config = wezterm.config_builder()
 
-          config.color_scheme = "enur"
+          config.color_scheme = "Catppuccin Mochar"
           config.font = wezterm.font "JetBrainsMono Nerd Font Mono"
           config.font_size = 10.0
           config.window_decorations = "TITLE | RESIZE"
