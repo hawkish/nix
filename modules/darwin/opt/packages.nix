@@ -7,5 +7,6 @@
     clojure
     babashka
     alacritty
+    wezterm
   ];
 }
