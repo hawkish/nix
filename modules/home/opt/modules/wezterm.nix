@@ -52,6 +52,7 @@
           config.font_size = 10.0
           config.window_decorations = "TITLE | RESIZE"
           config.front_end = "WebGpu"
+          config.enable_wayland = false
           return config
 
         '';
