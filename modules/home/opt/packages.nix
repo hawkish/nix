@@ -19,6 +19,7 @@
     lazygit
 
     brave
+    wezterm
 
     self.packages.${pkgs.system}.nvim
   ];
