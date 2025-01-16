@@ -12,7 +12,8 @@ Clone the NIX flakes at the home directory for Mac and /etc/nixos for NixOS.
 
 ```bash
 cd ~/nix
-nix run nix-darwin -- switch --flake .
+nix run nix-darwin -- switch --flake . (first time)
+darwin-rebuild switch --flake . (after the first time)
 ```
 
 ## Install (and switch to) the NIX flakes on NixOS
