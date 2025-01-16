@@ -51,6 +51,7 @@
           config.font = wezterm.font "JetBrainsMono Nerd Font Mono"
           config.font_size = 10.0
           config.window_decorations = "TITLE | RESIZE"
+          config.front_end = "WebGpu"
           return config
 
         '';
