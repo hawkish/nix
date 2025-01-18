@@ -17,7 +17,7 @@
           config.window_decorations = "TITLE | RESIZE"
           -- Fixing https://github.com/NixOS/nixpkgs/issues/336069
           config.front_end = "WebGpu"
-          config.enable_wayland = false
+          config.enable_wayland = true
           return config
 
         '';
