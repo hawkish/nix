@@ -43,19 +43,25 @@
     LC_TIME = "da_DK.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    model = "pc104";
-    layout = "gb";
-    variant = "mac";
-    options = "terminatwe:ctrl_alt_bksp";
+  services.xserver = {
+    enable = true;
+    displayManager = {
+      gdm = {
+        enable = true;
+        wayland = true;
+      };
+    };
+    desktopManager = {
+      gnome = {
+        enable = true;
+      };
+    };
+    xkb = {
+      layout = "gb";
+      model = "pc104";
+      variant = "mac";
+      options = "terminate:ctrl_alt_bksp";
+    };
   };
 
   # Enable CUPS to print documents.
