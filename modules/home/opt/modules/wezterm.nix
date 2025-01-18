@@ -16,7 +16,8 @@
           config.font_size = 10.0
           config.window_decorations = "TITLE | RESIZE"
           -- Fixing https://github.com/NixOS/nixpkgs/issues/336069
-          config.front_end = "WebGpu"
+          --config.front_end = "WebGpu"
+          config.use_ime = false
           config.enable_wayland = true
           return config
 
