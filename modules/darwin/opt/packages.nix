@@ -6,6 +6,6 @@
     jdk23
     clojure
     babashka
-    ruby_3_4
+    ruby
   ];
 }
