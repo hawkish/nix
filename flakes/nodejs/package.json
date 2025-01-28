@@ -1,7 +1,0 @@
-{
-  "name": "wscat",
-  "version": "latest",
-  "devDependencies": {
-    "wscat": "latest"
-  }
-}
