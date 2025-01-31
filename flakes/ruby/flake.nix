@@ -1,5 +1,5 @@
 {
-  description = "Ruby and Nodejs environment";
+  description = "Ruby environment";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
@@ -7,31 +7,44 @@
   };
 
   outputs =
-    { nixpkgs, flake-utils }:
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+    }:
     flake-utils.lib.eachDefaultSystem (
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
 
-        rubyEnv = pkgs.bundlerEnv {
-          # The full app environment with dependencies
-          inherit (pkgs) ruby;
-          gemdir = ./.; # Points to Gemfile.lock and gemset.nix
+        gems = pkgs.bundlerEnv {
+          name = "gems";
+          ruby = pkgs.ruby;
+          gemfile = ./Gemfile;
+          lockfile = ./Gemfile.lock;
+          gemset = ./gemset.nix;
         };
-
-        buildPackages = [
-          pkgs.bundix
-          rubyEnv
-          rubyEnv.wrappedRuby
-          pkgs.nodejs
-        ];
       in
       with pkgs;
       {
+        devShells.default = mkShell {
+          buildInputs = [
+            gems
+            bundix
+          ];
+        };
+
         packages.default = stdenv.mkDerivation {
-          name = "Setup environment";
-          src = ./.;
-          buildInputs = buildPackages;
+          name = "Cooking";
+          src = self;
+          buildInputs = [ gems ];
+          buildPhase = ''
+            ${gems}/bin/jekyll build
+          '';
+          installPhase = ''
+            mkdir -p $out
+            cp -r _site $out/_site
+          '';
         };
       }
     );
