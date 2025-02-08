@@ -4,7 +4,6 @@
 
     nodejs
     node2nix
-    python3
 
     btop
     dig
