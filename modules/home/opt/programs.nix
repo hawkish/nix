@@ -44,7 +44,8 @@
       enable = true;
       package = pkgs.brave;
       extensions = [
-        #{ id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
+        "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
+        "gcbommkclmclpchllfjekcdonpmejbdp" # https everywhere
       ];
       commandLineArgs = [
       ];
