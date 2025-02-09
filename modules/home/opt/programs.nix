@@ -40,5 +40,19 @@
       userEmail = "mortenhogh@gmail.com";
       userName = "hawkish";
     };
+    chromium = {
+      enable = true;
+      package = pkgs.brave;
+      extraOpts = {
+        "SyncDisabled" = true;
+        "PasswordManagerEnabled" = false;
+        "SpellcheckEnabled" = false;
+      };
+      extensions = [
+        { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
+      ];
+      commandLineArgs = [
+      ];
+    };
   };
 }
