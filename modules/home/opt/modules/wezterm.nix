@@ -9,6 +9,7 @@
       extraConfig = # Lua
         ''
             local wezterm = require 'wezterm';
+            local act = wezterm.action;
             local config = wezterm.config_builder()
 
             config.color_scheme = "Catppuccin Mocha"
