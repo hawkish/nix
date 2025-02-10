@@ -48,31 +48,6 @@
         id = 0;
         name = "Default";
         isDefault = true;
-        settings = {
-          # Disable about:config warning
-          "browser.aboutConfig.showWarning" = false;
-
-          # Mozilla telemetry
-          "toolkit.telemetry.enabled" = true;
-
-          # Homepage settings
-          # 0 = blank, 1 = home, 2 = last visited page, 3 = resume previous session
-          "browser.startup.homepage" = "https://duckduckgo.com";
-          "browser.search.defaultenginename" = "DuckDuckGo";
-          "browser.search.order.1" = "DuckDuckGo";
-          "browser.newtabpage.pinned" = [
-            {
-              "label" = "GitHub";
-              "url" = "https://github.com";
-            }
-            {
-              "label" = "YouTube";
-              "url" = "https://youtube.com";
-            }
-          ];
-          # Prefer dark theme
-          "layout.css.prefers-color-scheme.content-override" = 0; # 0: Dark, 1: Light, 2: Auto
-        };
         search = {
           force = true;
           default = "DuckDuckGo";
