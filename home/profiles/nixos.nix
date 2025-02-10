@@ -4,6 +4,12 @@
     "${self}/modules/home"
   ];
 
+  opt = {
+    programs = {
+      firefox.enable = true;
+    };
+  };
+
   home = {
     username = "mortenhogh";
     homeDirectory = "/home/mortenhogh";
