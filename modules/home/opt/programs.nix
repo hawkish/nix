@@ -44,7 +44,7 @@
 
     firefox = {
       enable = true;
-      profiles."user" = {
+      profiles."mortenhogh" = {
         id = 0;
         name = "Default";
         isDefault = true;
