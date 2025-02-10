@@ -73,7 +73,7 @@
           "layout.css.prefers-color-scheme.content-override" = 0; # 0: Dark, 1: Light, 2: Auto
         };
         extensions = with inputs.firefox-addons; [
-          ublock
+          ublock-origin
         ];
         search = {
           force = true;
