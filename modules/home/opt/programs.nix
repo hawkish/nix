@@ -50,6 +50,7 @@
           name = "default";
           isDefault = true;
           settings = {
+            "browser.startup.homepage" = "https://duckduckgo.com";
             "browser.search.defaultenginename" = "DuckDuckGo";
             "browser.search.order.1" = "DuckDuckGo";
             "signon.rememberSignons" = false;
@@ -57,10 +58,17 @@
             "browser.aboutConfig.showWarning" = false;
             "browser.compactmode.show" = true;
             "browser.cache.disk.enable" = false;
-            "mousewheel.default.delta_multiplier_x" = 20;
-            "mousewheel.default.delta_multiplier_y" = 20;
-            "mousewheel.default.delta_multiplier_z" = 20;
             "widget.disable-workspace-management" = true;
+            "browser.newtabpage.pinned" = [
+              {
+                "label" = "GitHub";
+                "url" = "https://github.com";
+              }
+              {
+                "label" = "YouTube";
+                "url" = "https://youtube.com";
+              }
+            ];
           };
           search = {
             force = true;
@@ -70,6 +78,9 @@
               "Google"
             ];
           };
+          extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
+            ublock-origin
+          ];
         };
       };
     };
