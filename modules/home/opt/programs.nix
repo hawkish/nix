@@ -72,12 +72,8 @@
           # Prefer dark theme
           "layout.css.prefers-color-scheme.content-override" = 0; # 0: Dark, 1: Light, 2: Auto
         };
-        languagePacks = [
-          "de"
-          "en-US"
-        ];
         extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
-          iblock
+          iblock-origin
           "1password"
         ];
         search = {
