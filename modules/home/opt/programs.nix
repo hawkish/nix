@@ -72,7 +72,7 @@
           # Prefer dark theme
           "layout.css.prefers-color-scheme.content-override" = 0; # 0: Dark, 1: Light, 2: Auto
         };
-        extensions = with inputs.firefox-addons; [
+        extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
           ublock-origin
         ];
         search = {
