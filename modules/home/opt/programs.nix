@@ -59,6 +59,9 @@
             "browser.compactmode.show" = true;
             "browser.cache.disk.enable" = false;
             "widget.disable-workspace-management" = true;
+            "mousewheel.default.delta_multiplier_x" = 20;
+            "mousewheel.default.delta_multiplier_y" = 20;
+            "mousewheel.default.delta_multiplier_z" = 20;
             "browser.newtabpage.pinned" = [
               {
                 "label" = "GitHub";
