@@ -7,5 +7,6 @@
     jdk23
     clojure
     babashka
+    firefox
   ];
 }

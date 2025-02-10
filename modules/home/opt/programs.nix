@@ -40,6 +40,9 @@
       userEmail = "mortenhogh@gmail.com";
       userName = "hawkish";
     };
+    firefox = {
+      enable = true;
+    };
     chromium = {
       enable = true;
       package = pkgs.brave;

@@ -4,6 +4,7 @@
     onActivation.cleanup = "uninstall";
     casks = [
       "brave-browser"
+      "firefox"
     ];
   };
 }
