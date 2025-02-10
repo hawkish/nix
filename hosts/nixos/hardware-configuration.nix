@@ -59,6 +59,8 @@
     bluetooth = {
       enable = true;
       powerOnBoot = true;
+      package = pkgs.bluez;
+      settings.Policy.AutoEnable = "true";
     };
   };
   services.blueman.enable = true;
