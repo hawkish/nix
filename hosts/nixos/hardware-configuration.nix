@@ -59,7 +59,7 @@
     bluetooth = {
       enable = true;
       powerOnBoot = true;
-      package = pkgs.bluez;
+      package = pkgs.bluez5;
       settings.Policy.AutoEnable = "true";
     };
   };
