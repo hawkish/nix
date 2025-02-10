@@ -44,9 +44,8 @@
 
     firefox = {
       enable = true;
-      profiles."mortenhogh" = {
+      profiles.default = {
         id = 0;
-        name = "Default";
         isDefault = true;
         search = {
           force = true;
