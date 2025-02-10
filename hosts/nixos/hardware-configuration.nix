@@ -50,7 +50,15 @@
   # networking.interfaces.wlp0s20f0u8.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
+  hardware = {
+    cpu = {
+      intel = {
+        updateMicrocode = config.hardware.enableRedistributableFirmware;
+      };
+    };
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+  };
 }
