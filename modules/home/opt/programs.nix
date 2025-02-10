@@ -74,7 +74,6 @@
         };
         extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
           iblock-origin
-          "1password"
         ];
         search = {
           force = true;
