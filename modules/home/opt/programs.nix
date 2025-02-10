@@ -43,7 +43,7 @@
       userEmail = "mortenhogh@gmail.com";
       userName = "hawkish";
     };
-    config = lib.mkIf config.opt.programs."firefox".enable {
+    config = lib.mkIf config.opt.programs.firefox.enable {
       firefox = {
         enable = true;
         profiles = {

@@ -1,7 +1,5 @@
 {
   self,
-  pkgs,
-  inputs,
   ...
 }:
 {
@@ -9,13 +7,16 @@
     "${self}/modules/home"
   ];
 
+  opt = {
+    programs = {
+      firefox.enable = false;
+    };
+  };
+
   home = {
     username = "mortenhogh";
     homeDirectory = "/Users/mortenhogh";
     stateVersion = "24.05";
-  };
-
-  programs = {
   };
 
 }
