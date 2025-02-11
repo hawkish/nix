@@ -10,6 +10,8 @@
   opt = {
     programs = {
       firefox.enable = false;
+      wezterm.enable = false;
+      alacritty.enable = false;
     };
   };
 
