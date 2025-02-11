@@ -22,3 +22,13 @@ darwin-rebuild switch --flake . (after the first time)
 cd /etc/nixos
 nixos-rebuild switch
 ```
+
+# Nvim setup
+
+## Wrong startup file
+
+[Auto-session](https://github.com/rmagatti/auto-session) is installed. So if you bork your startup, and nvim opens a deleted file with a ton of errors, open a new file and do:
+
+```bash
+:SessionSave
+```
