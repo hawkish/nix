@@ -23,6 +23,12 @@ cd /etc/nixos
 nixos-rebuild switch
 ```
 
+## Update the NIX flakes
+
+```bash
+nix flake update
+```
+
 # Nvim setup
 
 ## Wrong startup file
