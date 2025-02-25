@@ -1,8 +1,8 @@
-{ inputs, ... }:
+{ inputs, hostname, ... }:
 {
   imports = [
     inputs.hm.darwinModule
     ./hardware-configuration.nix
   ];
-  networking.hostName = "laptop";
+  networking.hostName = hostname;
 }
