@@ -48,7 +48,7 @@
         }:
         {
           devShells.default = pkgs.mkShell {
-            packages = [
+            packages = with pkgs; [
               pkgs.nixfmt-rfc-style
               pkgs.git
               pkgs.nh
