@@ -1,6 +1,6 @@
 {
   nix = {
-    useDaemon = true;
+    enable = false;
     settings = {
       experimental-features = "nix-command flakes";
     };
