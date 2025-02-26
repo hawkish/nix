@@ -6,7 +6,7 @@
 
 {
   imports = [
-    inputs.hm.nixosModule
+    inputs.hm.nixosModules.homemanager
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
