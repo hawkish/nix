@@ -40,6 +40,14 @@
             SponsoredPocket = false;
             Snippets = false;
           };
+
+        "3rdparty".extensions = {
+          "uBlock0@raymondhill.net" = {
+            permissions = [ "internal:privateBrowsingAllowed" ];
+            origins = [ ];
+          };
+        };
+
       };
       profiles = {
         default = {
