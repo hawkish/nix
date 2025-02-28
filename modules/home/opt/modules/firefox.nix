@@ -9,6 +9,38 @@
   config = lib.mkIf config.opt.programs.firefox.enable {
     programs.firefox = {
       enable = true;
+      policies = {
+        DontCheckDefaultBrowser = true;
+        DisableTelemetry = true;
+        DisableFirefoxStudies = true;
+        DisablePocket = true;
+        DisableFirefoxScreenshots = true;
+
+        Homepage.StartPage = "previous-session";
+
+        FirefoxSuggest = {
+          WebSuggestions = false;
+          SponsoredSuggestions = false;
+          ImproveSuggest = false;
+        };
+
+        EnableTrackingProtection = {
+          Value = true;
+          Cryptomining = true;
+          Fingerprinting = true;
+        };
+
+        FirefoxHome = # Make new tab only show search
+          {
+            Search = true;
+            TopSites = false;
+            SponsoredTopSites = false;
+            Highlights = false;
+            Pocket = false;
+            SponsoredPocket = false;
+            Snippets = false;
+          };
+      };
       profiles = {
         default = {
           id = 0;
