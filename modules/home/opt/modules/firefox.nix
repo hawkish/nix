@@ -37,6 +37,7 @@
                 "url" = "https://youtube.com";
               }
             ];
+            "extensions.ublock-origin.enabled" = true;
           };
           search = {
             force = true;
