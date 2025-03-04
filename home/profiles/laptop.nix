@@ -14,11 +14,4 @@
       alacritty.enable = false;
     };
   };
-
-  home = {
-    username = "mortenhogh";
-    homeDirectory = "/Users/mortenhogh";
-    stateVersion = "24.05";
-  };
-
 }

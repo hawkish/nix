@@ -17,9 +17,15 @@
           user ? null,
         }:
         let
-          specialArgs = {
-            inherit inputs self;
-          } // { hostname = hostname; };
+          specialArgs =
+            {
+              inherit inputs self;
+            }
+            // {
+              hostname = hostname;
+              user = user;
+              homeDir = "/home/${user}";
+            };
         in
         nixosSystem {
           inherit specialArgs;
@@ -60,9 +66,15 @@
           user ? null,
         }:
         let
-          specialArgs = {
-            inherit inputs self;
-          } // { hostname = hostname; };
+          specialArgs =
+            {
+              inherit inputs self;
+            }
+            // {
+              hostname = hostname;
+              user = user;
+              homeDir = "/Users/${user}";
+            };
         in
         darwinSystem {
           inherit specialArgs;
