@@ -2,7 +2,7 @@
 
 ## Install NIX
 
-Use the Determinate Systems GUI installer for Nix on a Mac. It is available [here](https://determinate.systems/posts/graphical-nix-installer/).
+Use the NixOS installer for MacOS. It is available [here](https://nixos.org/download.html). Don't use Determinate Systems GUI installer for Nix on a Mac - you'll end up configuring two nix systems.
 
 Use the NixOS installer for Linux. It is available [here](https://nixos.org/download.html).
 
@@ -12,7 +12,7 @@ Clone the NIX flakes at the home directory for Mac and /etc/nixos for NixOS.
 
 ```bash
 cd ~/nix
-nix run nix-darwin -- switch --flake . (first time)
+nix run nix-darwin --extra-experimental-features nix-command --extra-experimental-features flakes -- switch --flake . (first time)
 darwin-rebuild switch --flake . (after the first time)
 ```
 
