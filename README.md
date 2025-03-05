@@ -2,7 +2,8 @@
 
 ## Install NIX
 
-Use the NixOS installer for MacOS. It is available [here](https://nixos.org/download.html). Don't use Determinate Systems GUI installer for Nix on a Mac - you'll end up configuring two nix systems.
+Use the NixOS installer for MacOS. It is available [here](https://nixos.org/download.html).
+Don't use Determinate Systems GUI installer for Nix on a Mac - you'll end up configuring two nix systems.
 
 Use the NixOS installer for Linux. It is available [here](https://nixos.org/download.html).
 
