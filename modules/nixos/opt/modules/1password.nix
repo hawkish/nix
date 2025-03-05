@@ -1,6 +1,6 @@
 { config, lib, ... }:
 {
-  config = lib.mkIf config.opt.features.desktop.enable {
+  config = {
     programs._1password.enable = true;
     programs._1password-gui = {
       enable = true;
