@@ -1,4 +1,4 @@
- config, lib, ... }:
+{ config, lib, ... }:
 {
   config = lib.mkIf config.opt.features.desktop.enable {
     programs._1password.enable = true;
