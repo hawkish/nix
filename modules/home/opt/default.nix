@@ -1,9 +1,8 @@
 {
   imports = [
+    ./programs
     ./options.nix
-    ./modules
     ./packages.nix
-    ./programs.nix
     ./session.nix
   ];
 }
