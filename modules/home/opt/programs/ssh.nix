@@ -18,7 +18,7 @@ in
       extraConfig = ''
         Host github.com
           User hawkish
-          IdentityAgent \"${onePasswordSock}\"
+          IdentityAgent "${onePasswordSock}"
       '';
     };
   };
