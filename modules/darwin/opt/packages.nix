@@ -5,6 +5,7 @@
     p7zip
     jdk23
     clojure
+    neil
     babashka
     ruby
   ];
