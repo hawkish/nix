@@ -39,3 +39,8 @@ nix flake update
 ```bash
 :SessionSave
 ```
+
+# iTerm2
+iTerm2 caveats: 
+Careful with Settings... > Keys, Force keyboard. You'll end up with something that overwrites the system keyboard setting.
+
