@@ -1,10 +1,12 @@
-{ pkgs, self, ... }:
+{
+  config,
+  pkgs,
+  self,
+  ...
+}:
 let
   commonPkgs = with pkgs; [
     self.packages.${pkgs.system}.nvim
-
-    nodejs
-    node2nix
 
     btop
     dig
@@ -19,8 +21,17 @@ let
     lazygit
 
   ];
+
+  devPkgs = with pkgs; [
+    nodejs
+    node2nix
+  ];
+
+  work = with pkgs; [
+    slack
+  ];
 in
 {
-  home.packages = commonPkgs;
+  home.packages = commonPkgs ++ devPkgs ++ (if config.opt.features.work.enable then work else [ ]);
 
 }
