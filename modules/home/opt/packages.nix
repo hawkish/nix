@@ -1,6 +1,7 @@
 { pkgs, self, ... }:
-{
-  home.packages = with pkgs; [
+let
+  commonPkgs = with pkgs; [
+    self.packages.${pkgs.system}.nvim
 
     nodejs
     node2nix
@@ -17,6 +18,9 @@
 
     lazygit
 
-    self.packages.${pkgs.system}.nvim
   ];
+in
+{
+  home.packages = commonPkgs;
+
 }
