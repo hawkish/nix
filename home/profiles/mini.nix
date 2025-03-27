@@ -6,9 +6,7 @@
 
   opt = {
     features = {
-      work = {
-        enable = false;
-      };
+      work.enable = false;
     };
     programs = {
       "1password".enable = true;

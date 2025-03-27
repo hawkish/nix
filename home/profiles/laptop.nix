@@ -8,6 +8,9 @@
   ];
 
   opt = {
+    features = {
+      work.enable = false;
+    };
     programs = {
       "1password".enable = true;
       firefox.enable = false;
