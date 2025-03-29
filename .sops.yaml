@@ -1,7 +1,12 @@
 keys:
   - &mini age1mzjnjcltj9wrka2pdyzw6qcuuvkp8k6d5hdjm6435ss4zdnsyppqzd98n6
+  - &nixos age1t32qkvxsxtctlg602s8fd5v7jcdcd6n9lvn9tq20ullw65wfuc7q7yn3zp
 creation_rules:
   - path_regex: secrets/mini/[^/]+\.(yaml|json|env|ini)$
     key_groups:
       - age:
           - *mini
+  - path_regex: secrets/nixos/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+          - *nixos
