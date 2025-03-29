@@ -1,8 +1,12 @@
 {
+  config,
+  ...
+}:
+{
   programs = {
     git = {
       enable = true;
-      userEmail = "mortenhogh@gmail.com";
+      userEmail = config.sops.secrets.private_email.path;
       userName = "hawkish";
     };
   };

@@ -1,0 +1,7 @@
+keys:
+  - &mini age1mzjnjcltj9wrka2pdyzw6qcuuvkp8k6d5hdjm6435ss4zdnsyppqzd98n6
+creation_rules:
+  - path_regex: secrets/mini/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+          - *mini

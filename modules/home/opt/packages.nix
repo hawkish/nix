@@ -25,6 +25,8 @@ let
   devPkgs = with pkgs; [
     nodejs
     node2nix
+    age
+    sops
   ];
 
   work = with pkgs; [
