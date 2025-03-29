@@ -41,6 +41,25 @@ nix flake update
 ```
 
 # iTerm2
-iTerm2 caveats: 
+
+iTerm2 caveats:
 Careful with Settings... > Keys, Force keyboard. You'll end up with something that overwrites the system keyboard setting.
 
+# SOPS setup
+
+First create a directory for SOPS configuration and generate an age key pair:
+
+```bash
+mkdir -p ~/.config/sops/age
+age-keygen -o ~/.config/sops/age/keys.txt
+```
+
+Next edit the .sops.yaml file to include the hostname and the public key.
+
+Next create the secrets.json file:
+
+```bash
+nix-shell -p sops --run "sops secrets/[hostname]/secrets.json"
+```
+
+... and add the secret to the file.
