@@ -8,4 +8,8 @@
   laptop = [
     ./profiles/laptop.nix
   ];
+  macbookpro-work = [
+    ./profiles/macbookpro-work.nix
+  ];
+
 }
