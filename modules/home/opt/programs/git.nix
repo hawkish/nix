@@ -24,12 +24,23 @@
     programs = {
       git = {
         enable = true;
-        includes = ([
-          # Private
-          {
-            path = config.sops.templates.private-git-config.path;
-          }
-        ]);
+        includes = (
+          if config.opt.features.work.enable then
+            [
+              # Private
+              {
+                path = config.sops.templates.private-git-config.path;
+              }
+
+            ]
+          else
+            [
+              # Private
+              {
+                path = config.sops.templates.private-git-config.path;
+              }
+            ]
+        );
       };
     };
   };
