@@ -47,11 +47,11 @@ in
     programs.ssh = lib.mkMerge [
       (lib.mkIf config.opt.features.personal.enable {
         enable = true;
-        extraConfig = config.sops.templates.personal-ssh-config.path;
+        includes = [ config.sops.templates.personal-ssh-config.path ];
       })
       (lib.mkIf config.opt.features.work.enable {
         enable = true;
-        extraConfig = config.sops.templates.work-ssh-config.path;
+        includes = [ config.sops.templates.work-ssh-config.path ];
       })
     ];
   };
