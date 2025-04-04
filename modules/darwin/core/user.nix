@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, user, ... }:
 {
-  users.users."mortenhogh" = {
+  users.users."${user}" = {
     uid = 1000;
-    home = "/Users/mortenhogh";
+    home = "/Users/${user}";
     # home-manager needs a default shell to set environment variables
     shell = pkgs.zsh;
   };

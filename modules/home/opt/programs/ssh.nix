@@ -15,7 +15,6 @@ in
   config = lib.mkIf config.opt.programs."1password".enable {
      sops = {
         secrets = {
-          private_email = lib.mkIf (config.opt.features.personal.enable) { };
           work_email = lib.mkIf (config.opt.features.work.enable) { };
         };
 
