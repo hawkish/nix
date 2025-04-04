@@ -24,7 +24,7 @@ in
           Host github.com
             HostName github.com
             User hawkish
-            IdentityAgent ${onePasswordSock}
+            IdentityAgent "${onePasswordSock}"
         '';
 
         work-ssh-config.content = ''
@@ -34,7 +34,7 @@ in
           Host github.com
             HostName github.com
             User ${config.sops.placeholder.work_email}
-            IdentityAgent ${onePasswordSock}
+            IdentityAgent "${onePasswordSock}"
           Host github.com-personal
             HostName github.com
             User hawkish
