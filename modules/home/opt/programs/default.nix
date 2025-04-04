@@ -1,11 +1,11 @@
 {
   imports = [
-    #./ssh.nix
+    ./ssh.nix
     ./alacritty.nix
     ./wezterm.nix
     ./firefox.nix
     ./zsh.nix
     ./brave.nix
-    #./git.nix
+    ./git-config.nix
   ];
 }
