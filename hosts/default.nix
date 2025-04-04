@@ -105,7 +105,7 @@
         hostname = "laptop";
         user = "mortenhogh";
       };
-      macbookpro-work = mkHost {
+      BDM-LW262PK2D3 = mkHost {
         hostname = "BDM-LW262PK2D3";
         user = "mho";
       };

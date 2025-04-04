@@ -8,8 +8,8 @@
   laptop = [
     ./profiles/laptop.nix
   ];
-  macbookpro-work = [
-    ./profiles/macbookpro-work.nix
+  BDM-LW262PK2D3 = [
+    ./profiles/BDM-LW262PK2D3.nix
   ];
 
 }
