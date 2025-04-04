@@ -50,12 +50,12 @@ in
       enable = true;
 
       matchBlocks.personal = (lib.mkIf config.opt.features.personal.enable){
-        extraConfig = ${config.sops.templates.personal-ssh-config.path}; 
+        extraConfig = config.sops.templates.personal-ssh-config.path; 
       };
 
-      matchBlocks.work = (lib.mkIf config.opt.features.work.enable) {
-        extraConfig = ${config.sops.templates.work-ssh-config.path};
-      };
+      #matchBlocks.work = (lib.mkIf config.opt.features.work.enable) {
+      #  extraConfig = config.sops.templates.work-ssh-config.path;
+      #};
     };
   };
 }
