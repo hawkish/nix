@@ -20,14 +20,14 @@ in
 
       templates = {
         # Personal
-        personal-ssh-config.content = ''
+        personal-ssh-config.content = lib.mkIf (config.opt.features.personal.enable) ''
           Host github.com
             HostName github.com
             User hawkish
             IdentityAgent "${onePasswordSock}"
         '';
 
-        work-ssh-config.content = ''
+        work-ssh-config.content = lib.mkIf (config.opt.features.work.enable) ''
           Host git.bankdata.eficode.io
             User ${config.sops.placeholder.work_email}
             IdentityFile ~/.ssh/eficode_ed25519
