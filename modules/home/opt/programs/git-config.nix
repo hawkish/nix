@@ -13,20 +13,23 @@
 
       templates = {
         # Personal
-        personal-git-config.content = lib.generators.toINI { } {
-          user = {
-            email = config.sops.placeholder.private_email;
-            name = "hawkish";
+        personal-git-config = lib.mkIf (config.opt.features.personal.enable) {
+          content = lib.generators.toINI { } {
+            user = {
+              email = config.sops.placeholder.private_email;
+              name = "hawkish";
+            };
           };
         };
 
-        work-git-config.content = lib.generators.toINI { } {
-          user = {
-            email = config.sops.placeholder.work_email;
-            name = "Morten Høgh";
+        work-git-config = lib.mkIf (config.opt.features.work.enable) {
+          content = lib.generators.toINI { } {
+            user = {
+              email = config.sops.placeholder.work_email;
+              name = "Morten Høgh";
+            };
           };
         };
-
       };
     };
     programs = {

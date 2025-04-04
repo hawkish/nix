@@ -44,16 +44,15 @@ in
       };
     };
 
-    programs.ssh = {
-      enable = true;
-
-      matchBlocks.personal = (lib.mkIf config.opt.features.personal.enable) {
+    programs.ssh = lib.mkMerge [
+      (lib.mkIf config.opt.features.personal.enable {
+        enable = true;
         extraConfig = config.sops.templates.personal-ssh-config.path;
-      };
-
-      #matchBlocks.work = (lib.mkIf config.opt.features.work.enable) {
-      #  extraConfig = config.sops.templates.work-ssh-config.path;
-      #};
-    };
+      })
+      (lib.mkIf config.opt.features.work.enable {
+        enable = true;
+        extraConfig = config.sops.templates.work-ssh-config.path;
+      })
+    ];
   };
 }
