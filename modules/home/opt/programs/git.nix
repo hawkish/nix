@@ -7,18 +7,26 @@
   config = {
     sops = {
       secrets = {
-        private_email = { };
+        private_email = lib.mkIf (config.opt.features.personal.enable) { };
         work_email = lib.mkIf (config.opt.features.work.enable) { };
       };
 
       templates = {
-        # Private PC
-        private-git-config.content = lib.generators.toINI { } {
+        # Personal
+        personal-git-config.content = lib.generators.toINI { } {
           user = {
             email = config.sops.placeholder.private_email;
             name = "hawkish";
           };
         };
+
+        work-git-config.content = lib.generators.toINI { } {
+          user = {
+            email = config.sops.placeholder.work_email;
+            name = "Morten Høgh";
+          };
+        };
+
       };
     };
     programs = {
@@ -27,17 +35,17 @@
         includes = (
           if config.opt.features.work.enable then
             [
-              # Private
+              # Work
               {
-                path = config.sops.templates.private-git-config.path;
+                path = config.sops.templates.work-git-config.path;
               }
 
             ]
           else
             [
-              # Private
+              # Personal
               {
-                path = config.sops.templates.private-git-config.path;
+                path = config.sops.templates.personal-git-config.path;
               }
             ]
         );

@@ -9,6 +9,7 @@
 
   opt = {
     features = {
+      personal.enable = true;
       work.enable = false;
     };
     programs = {
