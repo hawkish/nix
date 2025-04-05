@@ -81,10 +81,10 @@
           };
           search = {
             force = true;
-            default = "DuckDuckGo";
+            default = "ddg";
             order = [
-              "DuckDuckGo"
-              "Google"
+              "ddg"
+              "google"
             ];
           };
           extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
