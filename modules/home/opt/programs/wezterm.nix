@@ -17,10 +17,10 @@
 
               config.color_scheme = "Catppuccin Mocha"
               config.font = wezterm.font "JetBrainsMono Nerd Font Mono"
-              config.font_size = 15.0
+              config.font_size = 10.0
               config.window_decorations = "TITLE | RESIZE"
-              config.initial_rows = 200
-              config.initial_cols = 300
+              config.initial_rows = 50
+              config.initial_cols = 50
               -- Fixing https://github.com/NixOS/nixpkgs/issues/336069
               config.front_end = "WebGpu"
               config.enable_wayland = false
