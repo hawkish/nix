@@ -20,7 +20,7 @@
               config.font_size = 10.0
               config.window_decorations = "TITLE | RESIZE"
               config.initial_rows = 50
-              config.initial_cols = 50
+              config.initial_cols = 100
               -- Fixing https://github.com/NixOS/nixpkgs/issues/336069
               config.front_end = "WebGpu"
               config.enable_wayland = false
