@@ -8,7 +8,6 @@
     enable = true;
     baseIndex = 1;
     clock24 = true;
-    keyMode = "vi";
     newSession = true;
     shortcut = "t";
     escapeTime = 0;
