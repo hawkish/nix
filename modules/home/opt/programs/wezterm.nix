@@ -19,6 +19,8 @@
               config.font = wezterm.font "JetBrainsMono Nerd Font Mono"
               config.font_size = 10.0
               config.window_decorations = "TITLE | RESIZE"
+              config.initial_rows = 200
+              config.initial_cols = 300
               -- Fixing https://github.com/NixOS/nixpkgs/issues/336069
               config.front_end = "WebGpu"
               --config.use_ime = false
