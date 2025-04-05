@@ -9,7 +9,7 @@
     baseIndex = 1;
     clock24 = true;
     newSession = true;
-    keymode = "vi";
+    keyMode = "vi";
     shortcut = "b";
     escapeTime = 0;
     shell = lib.getExe pkgs.zsh;
