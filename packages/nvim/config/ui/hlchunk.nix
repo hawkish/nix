@@ -15,22 +15,15 @@
   extraConfigLua = # Lua
     ''
 
-      local colors = require("tokyonight.functions").get_colors("storm")
       require("hlchunk").setup({
         chunk = {
           enable = true,
-          style =
-            {
-              { fg = colors.Cyan },
-              { fg = colors.Red },
-            }
         },
         indent = {
           enable = true,
         },
         line_num = {
           enable = true,
-          style = colors.Cyan,
           use_treesitter = true
         }
       })
