@@ -14,9 +14,6 @@
     escapeTime = 0;
     shell = lib.getExe pkgs.zsh;
     plugins = with pkgs; [
-      tmuxPlugins.resurrect
-      tmuxPlugins.continuum
-      tmuxPlugins.sensible
       tmuxPlugins.better-mouse-mode
     ];
     extraConfig = ''
