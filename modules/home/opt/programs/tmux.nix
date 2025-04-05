@@ -10,7 +10,6 @@
     clock24 = true;
     keyMode = "vi";
     newSession = true;
-    shell = lib.getExe pkgs.zsh;
     shortcut = "t";
     escapeTime = 0;
     plugins = with pkgs; [
