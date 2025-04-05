@@ -7,5 +7,6 @@
     ./zsh.nix
     ./brave.nix
     ./git-config.nix
+    ./tmux.nix
   ];
 }
