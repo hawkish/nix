@@ -27,7 +27,7 @@
         plugins = [
           "git"
         ];
-        theme = "robbyrussell";
+        #theme = "robbyrussell";
       };
     };
   };
