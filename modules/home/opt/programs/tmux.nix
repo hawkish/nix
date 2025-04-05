@@ -17,8 +17,7 @@
       tmuxPlugins.resurrect
       tmuxPlugins.continuum
       tmuxPlugins.sensible
-      tmuxPlugins.tpm
-      dracula.tmux
+      tmuxPlugins.dracula
     ];
     extraConfig = ''
       # Config Dracula Theme
