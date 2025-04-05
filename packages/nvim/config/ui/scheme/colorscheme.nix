@@ -1,3 +1,3 @@
 {
-  options.colorscheme = "tokyonight-storm";
+  options.colorsheme = "tokyonight-storm";
 }
