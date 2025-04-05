@@ -17,7 +17,7 @@
 
               config.color_scheme = "Catppuccin Mocha"
               config.font = wezterm.font "JetBrainsMono Nerd Font Mono"
-              config.font_size = 10.0
+              config.font_size = 15.0
               config.window_decorations = "TITLE | RESIZE"
               config.initial_rows = 200
               config.initial_cols = 300
