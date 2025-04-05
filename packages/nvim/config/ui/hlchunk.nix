@@ -15,7 +15,7 @@
   extraConfigLua = # Lua
     ''
 
-      local colors = require("tokyonight.colors").get_colors("storm")
+      local colors = require("tokyonight.functions").get_colors("storm")
       require("hlchunk").setup({
         chunk = {
           enable = true,
