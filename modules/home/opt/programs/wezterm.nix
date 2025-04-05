@@ -23,8 +23,6 @@
               config.initial_cols = 300
               -- Fixing https://github.com/NixOS/nixpkgs/issues/336069
               config.front_end = "WebGpu"
-              --config.use_ime = false
-              --config.front_end = "OpenGL"
               config.enable_wayland = false
               config.mouse_bindings = {
             	{
