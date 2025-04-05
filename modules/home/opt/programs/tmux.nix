@@ -22,6 +22,7 @@
     extraConfig = ''
 
       set -g default-terminal tmux-256color
+      set -g default-shell /bin/zsh
 
       set -g xterm-keys on
       set -as terminal-features 'xterm*:extkeys'
