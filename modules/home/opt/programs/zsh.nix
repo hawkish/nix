@@ -22,13 +22,13 @@
         grp = "git remote prune origin";
         gp = "git push";
       };
-      oh-my-zsh = {
-        enable = true;
-        plugins = [
-          "git"
-        ];
-        #theme = "robbyrussell";
-      };
+      #oh-my-zsh = {
+      #  enable = true;
+      #  plugins = [
+      #    "git"
+      #  ];
+      #theme = "robbyrussell";
+      #};
     };
   };
 }
