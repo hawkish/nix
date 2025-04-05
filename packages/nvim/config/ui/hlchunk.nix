@@ -14,8 +14,6 @@
 
   extraConfigLua = # Lua
     ''
-      local colors = require("nebulous.functions").get_colors("twilight")
-
       require("hlchunk").setup({
         chunk = {
           enable = true,

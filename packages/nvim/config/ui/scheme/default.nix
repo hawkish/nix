@@ -1,6 +1,6 @@
 {
   imports = [
-    ./colorscheme.nix
-    ./nebulous.nix
+    #./colorscheme.nix
+    #./nebulous.nix
   ];
 }
