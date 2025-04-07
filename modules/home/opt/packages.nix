@@ -27,6 +27,7 @@ let
     node2nix
     age
     sops
+    pnpm
   ];
 
   work = with pkgs; [
