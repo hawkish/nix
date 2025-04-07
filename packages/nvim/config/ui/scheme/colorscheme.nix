@@ -1,3 +1,3 @@
 {
-  colorschemes = "catppuccin";
+  colorscheme = "catppuccin";
 }
