@@ -23,11 +23,12 @@ let
   ];
 
   devPkgs = with pkgs; [
-    nodejs
+    nodejs_22
     node2nix
     age
     sops
-    pnpm
+    pnpm.override
+    { withNode = false; }
   ];
 
   work = with pkgs; [
