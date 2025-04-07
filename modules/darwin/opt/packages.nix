@@ -8,5 +8,6 @@
     babashka
     neil
     ruby
+    tokyonight
   ];
 }

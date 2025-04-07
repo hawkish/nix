@@ -20,8 +20,6 @@ let
 
     lazygit
 
-    tokyonight
-
   ];
 
   devPkgs = with pkgs; [
