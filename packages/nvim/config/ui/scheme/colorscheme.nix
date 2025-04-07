@@ -1,3 +1,3 @@
 {
-  options.colorsheme = "catppuccin";
+  options.colorsheme = "catppuccin/nix";
 }
