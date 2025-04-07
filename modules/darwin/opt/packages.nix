@@ -8,6 +8,6 @@
     babashka
     neil
     ruby
-    vimPlugin.catppuccin-nvim
+    vimPlugins.catppuccin-nvim
   ];
 }
