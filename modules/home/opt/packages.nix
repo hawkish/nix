@@ -27,8 +27,7 @@ let
     node2nix
     age
     sops
-    pnpm.override
-    { withNode = false; }
+    (pnpm.override { withNode = false; })
   ];
 
   work = with pkgs; [
