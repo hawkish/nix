@@ -4,7 +4,7 @@
     git
     p7zip
     brave
-    jdk23
+    jdk21
     clojure
     babashka
     neil

@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     git
     p7zip
-    jdk23
+    jdk21
     clojure
     babashka
     neil
