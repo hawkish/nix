@@ -7,7 +7,7 @@
         owner = "folke";
         repo = "tokyonight.nvim";
         rev = "b262293ef481b0d1f7a14c708ea7ca649672e200";
-        #hash = "sha256-um9G0BQbj+/SCoPpKz1J+kkhz2dCzKhMaY5tT0U/IrY=";
+        hash = "sha256-pMzk1gRQFA76BCnIEGBRjJ0bQ4YOf3qecaU6Fl/nqLE=";
       };
     })
   ];
