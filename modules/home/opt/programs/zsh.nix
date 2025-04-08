@@ -4,23 +4,36 @@
   ...
 }:
 let
-  workExtra = lib.optionals config.opt.features.work.enable ''
-    # Ruby gem installation
-      export GEM_HOME="$HOME/.gem"
-      export GEM_PATH="$HOME/.gem"
-      export PATH=$GEM_HOME/bin:$PATH
+  workExtra =
+    if config.opt.features.work.enable then
+      ''
+        # Ruby gem installation
+          export GEM_HOME="$HOME/.gem"
+          export GEM_PATH="$HOME/.gem"
+          export PATH=$GEM_HOME/bin:$PATH
 
-      # Chruby installation
-      # enable chruby and select Ruby version
-      source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
-      source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
-      # chruby ruby-3.1.2
-      chruby 3.4.2
-  '';
-  personalExtra = lib.optionals config.opt.features.personal.enable ''
-    # Extra commands
-    # Other extras
-  '';
+          # Chruby installation
+          # enable chruby and select Ruby version
+          source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+          source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+          # chruby ruby-3.1.2
+          chruby 3.4.2
+      ''
+    else
+      "";
+  personalExtra =
+    if config.opt.features.personal.enable then
+      ''
+        # Extra commands
+        # Other extras
+      ''
+    else
+      "";
+  initExtra = lib.concatStringsSep "\n" [
+    workExtra
+    personalExtra
+  ];
+
 in
 {
   programs = {
@@ -46,7 +59,7 @@ in
         grp = "git remote prune origin";
         gp = "git push";
       };
-      initExtra = workExtra + personalExtra;
+      initExtra = initExtra;
       oh-my-zsh = {
         enable = true;
         plugins = [
