@@ -17,7 +17,7 @@ let
       # chruby ruby-3.1.2
       chruby 3.4.2
   '';
-  personalExtra = lib.optionals config.opt.features.personal.enable "";
+  personalExtra = lib.optionals config.opt.features.personal.enable [ ];
 in
 {
   programs = {
