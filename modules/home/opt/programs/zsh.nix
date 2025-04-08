@@ -22,6 +22,19 @@
         grp = "git remote prune origin";
         gp = "git push";
       };
+      extraConfig = ''
+        # Ruby gem installation
+        export GEM_HOME="$HOME/.gem"
+        export GEM_PATH="$HOME/.gem"
+        export PATH=$GEM_HOME/bin:$PATH
+
+        # Chruby installation
+        # enable chruby and select Ruby version
+        source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+        source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+        # chruby ruby-3.1.2
+        chruby 3.4.2
+      '';
       oh-my-zsh = {
         enable = true;
         plugins = [
