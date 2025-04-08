@@ -1,11 +1,20 @@
 {
+  config,
+  lib,
+  ...
+}:
+let
+  workBrew = lib.mkIf (config.opt.features.work.enable) [
+    "chruby"
+    "ruby-install"
+  ];
+  personalBrew = lib.mkIf (config.opt.features.personal.enable) [ ];
+in
+{
   homebrew = {
     enable = true;
     onActivation.cleanup = "uninstall";
-    brews = [
-      "chruby"
-      "ruby-install"
-    ];
+    brews = [ ] ++ workBrew ++ personalBrew;
     casks = [
       "brave-browser"
       "1Password"
