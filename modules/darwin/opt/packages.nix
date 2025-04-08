@@ -7,6 +7,5 @@
     clojure
     babashka
     neil
-    ruby
   ];
 }
