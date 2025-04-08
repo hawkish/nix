@@ -2,7 +2,7 @@
   homebrew = {
     enable = true;
     onActivation.cleanup = "uninstall";
-    formulae = [
+    brews = [
       "chruby"
     ];
     casks = [
