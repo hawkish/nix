@@ -22,7 +22,7 @@
         grp = "git remote prune origin";
         gp = "git push";
       };
-      extraConfig = ''
+      initExtra = ''
         # Ruby gem installation
         export GEM_HOME="$HOME/.gem"
         export GEM_PATH="$HOME/.gem"
