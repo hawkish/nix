@@ -1,6 +1,6 @@
 {
   imports = [
     ./colorscheme.nix
-    ./tokyonight.nix
+    ./nebulous.nix
   ];
 }

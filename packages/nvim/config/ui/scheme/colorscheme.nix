@@ -1,4 +1,4 @@
 {
-  colorscheme = "tokyonight";
+  colorscheme = "nebulous";
 
 }
