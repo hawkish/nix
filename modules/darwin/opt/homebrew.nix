@@ -4,11 +4,11 @@
   ...
 }:
 let
-  workBrew = lib.optionals config.opt.features.work.enable [
+  workBrew = lib.mkIf (config.opt.features.work.enable) [
     "chruby"
     "ruby-install"
   ];
-  personalBrew = lib.optionals config.opt.features.personal.enable [ ];
+  personalBrew = lib.mkIf (config.opt.features.personal.enable) [ ];
 in
 {
   homebrew = {
