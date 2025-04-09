@@ -5,4 +5,12 @@
     ./hardware-configuration.nix
   ];
   networking.hostName = hostname;
+
+  opt = {
+    features = {
+      personal.enable = false;
+      work.enable = true;
+    };
+  }
+ 
 }

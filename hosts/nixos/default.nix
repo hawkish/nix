@@ -11,6 +11,14 @@
     ./hardware-configuration.nix
   ];
 
+  opt = {
+    features = {
+      personal.enable = false;
+      work.enable = true;
+    };
+  }
+
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
