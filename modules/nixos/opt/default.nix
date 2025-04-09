@@ -4,5 +4,6 @@
     ./font.nix
     ./packages.nix
     ./console.nix
+    ./options.nix
   ];
 }
