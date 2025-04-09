@@ -8,5 +8,6 @@
     ./brave.nix
     ./git-config.nix
     ./tmux.nix
+    ./kitty.nix
   ];
 }
