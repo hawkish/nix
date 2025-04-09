@@ -13,8 +13,8 @@
 
   opt = {
     features = {
-      personal.enable = false;
-      work.enable = true;
+      personal.enable = true;
+      work.enable = false;
     };
   };
 
