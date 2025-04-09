@@ -34,7 +34,7 @@
     shellIntegration.enableZshIntegration = true;
     font = {
       name = "JetBrainsMono Nerd Font Mono";
-      size = 14;
+      size = 10;
     };
     extraConfig = ''
       map shift+enter send_text all \x1b[13;2u
