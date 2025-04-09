@@ -16,8 +16,7 @@
       personal.enable = false;
       work.enable = true;
     };
-  }
-
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

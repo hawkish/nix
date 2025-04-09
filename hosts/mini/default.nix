@@ -11,6 +11,6 @@
       personal.enable = false;
       work.enable = true;
     };
-  }
+  };
 
 }
