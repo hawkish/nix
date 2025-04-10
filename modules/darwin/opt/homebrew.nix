@@ -6,6 +6,7 @@ let
   workBrew =
     if config.opt.features.work.enable then
       [
+        # Ruby
         "chruby"
         "ruby-install"
         "autoconf"
@@ -22,7 +23,7 @@ let
     else
       [ ];
   personalBrew = if config.opt.features.personal.enable then [ ] else [ ];
-  sharedBrew = [ ];
+  sharedBrew = [ "wget" ];
 in
 {
   homebrew = {
