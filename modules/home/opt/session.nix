@@ -9,6 +9,12 @@
       GEM_PATH = "$HOME/.gem";
       SOPS_AGE_KEY_FILE = "${homeDir}/.config/sops/age/keys.txt";
     };
-    sessionPath = [ "$GEM_HOME/bin" ];
+    sessionPath = [
+      "$GEM_HOME/bin"
+      "$HOME/.local/bin"
+      "$HOME/bin"
+      "$HOME/.nix-profile/bin"
+      "/opt/homebrew/bin"
+    ];
   };
 }

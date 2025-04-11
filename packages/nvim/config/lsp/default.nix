@@ -2,7 +2,7 @@
   imports = [
     ./conform.nix
     ./conjure.nix
-    ./jdtls.nix
+    #./jdtls.nix
     ./lsp.nix
   ];
 }
