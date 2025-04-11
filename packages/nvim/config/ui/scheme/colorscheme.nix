@@ -1,4 +1,3 @@
 {
-  colorscheme = "nebulous";
-
+  colorschemes.tokyonight.enable = true;
 }
