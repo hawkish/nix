@@ -1,3 +1,3 @@
 {
-  colorschemes.tokyonight-storm.enable = true;
+  colorschemes.tokyonight.enable = true;
 }
