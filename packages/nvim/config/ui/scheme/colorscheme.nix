@@ -1,3 +1,10 @@
 {
-  colorschemes.tokyonight.enable = true;
+  colorschemes = {
+    tokyonight = {
+      enable = true;
+      settings = {
+        style = "day";
+      };
+    };
+  };
 }
