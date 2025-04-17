@@ -9,5 +9,6 @@
     ./git-config.nix
     ./tmux.nix
     ./kitty.nix
+    ./vscode.nix
   ];
 }
