@@ -88,6 +88,9 @@
                     useUserPackages = true;
                     users.${user}.imports = homeImports.${hostname};
                     extraSpecialArgs = specialArgs;
+                    sharedModules = [
+                      inputs.mac-app-util.homeManagerModules.default
+                    ];
                   };
                 }
               else

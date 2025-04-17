@@ -25,6 +25,10 @@
 
     sops-nix.url = "github:Mic92/sops-nix";
 
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+
+    mac-app-util.url = "github:hraban/mac-app-util";
+
   };
 
   outputs =

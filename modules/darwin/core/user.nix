@@ -1,4 +1,8 @@
-{ pkgs, user, ... }:
+{
+  pkgs,
+  user,
+  ...
+}:
 {
   users.users."${user}" = {
     uid = 1000;
