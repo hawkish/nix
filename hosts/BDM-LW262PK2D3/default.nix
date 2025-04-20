@@ -10,6 +10,7 @@
     features = {
       personal.enable = false;
       work.enable = true;
+      isNixos.enable = false;
     };
   };
 

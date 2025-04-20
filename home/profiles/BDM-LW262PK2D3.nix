@@ -11,6 +11,7 @@
     features = {
       personal.enable = false;
       work.enable = true;
+      isNixos.enable = false;
     };
     programs = {
       "1password".enable = true;
