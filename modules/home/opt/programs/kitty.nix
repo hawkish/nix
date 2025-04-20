@@ -1,9 +1,9 @@
 {
-  buildins,
+  builtins,
   ...
 }:
 let
-  isNixos = buildins.isNixos;
+  isNixos = builtins.isNixos;
 in
 {
 
