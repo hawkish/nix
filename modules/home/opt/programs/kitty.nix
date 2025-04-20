@@ -1,4 +1,12 @@
 {
+  buildins,
+  ...
+}:
+let
+  isNixos = buildins.isNixos;
+in
+{
+
   home.file.kitty-theme = {
     enable = true;
     target = ".config/kitty/themes/enur.conf";
@@ -34,7 +42,7 @@
     shellIntegration.enableZshIntegration = true;
     font = {
       name = "JetBrainsMono Nerd Font Mono";
-      size = 10;
+      size = if isNixos then 10 else 12;
     };
     extraConfig = ''
       map shift+enter send_text all \x1b[13;2u
