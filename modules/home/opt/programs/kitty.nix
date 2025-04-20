@@ -1,5 +1,4 @@
 { config, ... }:
-
 {
 
   home.file.kitty-theme = {
@@ -37,7 +36,7 @@
     shellIntegration.enableZshIntegration = true;
     font = {
       name = "JetBrainsMono Nerd Font Mono";
-      size = if (config.opt.features.isNixos) then 10 else 12;
+      size = if config.opt.features.isNixos.enable then 10 else 12;
     };
     extraConfig = ''
       map shift+enter send_text all \x1b[13;2u
