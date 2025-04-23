@@ -11,5 +11,6 @@
     ./todo-commnets.nix
     ./lazygit.nix
     ./toggleterm.nix
+    ./kulala.nix
   ];
 }
