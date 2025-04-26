@@ -4,7 +4,7 @@
   ...
 }:
 let
-  workExtra =
+  workContent =
     if config.opt.features.work.enable then
       ''
         # Ruby gem installation
@@ -21,7 +21,7 @@ let
       ''
     else
       "";
-  personalExtra =
+  personalContent =
     if config.opt.features.personal.enable then
       ''
         # Extra commands
@@ -29,9 +29,9 @@ let
       ''
     else
       "";
-  initExtra = lib.concatStringsSep "\n" [
-    workExtra
-    personalExtra
+  initContent = lib.concatStringsSep "\n" [
+    workContent
+    personalContent
   ];
 
 in
@@ -59,7 +59,7 @@ in
         grp = "git remote prune origin";
         gp = "git push";
       };
-      initExtra = initExtra;
+      initContent = initContent;
       oh-my-zsh = {
         enable = true;
         plugins = [
