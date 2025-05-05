@@ -29,9 +29,15 @@ let
       ''
     else
       "";
+  commonContent = ''
+    # XCCommander
+    export PATH=$HOME/git/xccommander/scripts:$PATH
+  '';
+
   initContent = lib.concatStringsSep "\n" [
     workContent
     personalContent
+    commonContent
   ];
 
 in
