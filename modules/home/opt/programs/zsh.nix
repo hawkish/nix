@@ -31,7 +31,7 @@ let
       "";
   commonContent = ''
     # XCCommander
-    export PATH=$HOME/git/xccommander/scripts:$PATH
+    export PATH=$HOME/git/xccommander/uberscripts:$PATH
   '';
 
   initContent = lib.concatStringsSep "\n" [
