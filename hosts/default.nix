@@ -36,6 +36,7 @@
                 {
                   home-manager = {
                     useUserPackages = true;
+                    backupFileExtension = true;
                     users.${user}.imports = homeImports.${hostname};
                     extraSpecialArgs = specialArgs;
                   };
@@ -87,6 +88,7 @@
                 {
                   home-manager = {
                     useUserPackages = true;
+                    backupFileExtension = true;
                     users.${user}.imports = homeImports.${hostname};
                     extraSpecialArgs = specialArgs;
                     sharedModules = [
