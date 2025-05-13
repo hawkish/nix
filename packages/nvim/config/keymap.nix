@@ -193,7 +193,23 @@
         desc = "Move down";
       };
     }
-
+    # Better indenting
+    {
+      mode = "v";
+      key = "<";
+      action = "<gv";
+      options = {
+        desc = "Indent left";
+      };
+    }
+    {
+      mode = "v";
+      key = ">";
+      action = ">gv";
+      options = {
+        desc = "Indent right";
+      };
+    }
     # Clear search
     {
       mode = "n";
@@ -299,7 +315,7 @@
       action = "<C-W>j";
       options = {
         silent = true;
-        desc = "Move to window bellow";
+        desc = "Move to window below";
       };
     }
     {
