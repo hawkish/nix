@@ -32,6 +32,7 @@
     '';
   };
   programs.kitty = {
+    macos_option_as_alt = true;
     enable = true;
     shellIntegration.enableZshIntegration = true;
     font = {
