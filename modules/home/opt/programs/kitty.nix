@@ -32,7 +32,6 @@
     '';
   };
   programs.kitty = {
-    macos_option_as_alt = true;
     enable = true;
     shellIntegration.enableZshIntegration = true;
     font = {
@@ -40,6 +39,7 @@
       size = if config.opt.features.isNixos.enable then 10 else 12;
     };
     extraConfig = ''
+      macos_option_as_alt yes
       map shift+enter send_text all \x1b[13;2u
     '';
   };
