@@ -42,7 +42,16 @@
       shell = "${pkgs.tmux}/bin/tmux a";
     };
     extraConfig = ''
-      map shift+enter send_text all \x1b[13;2u
+      set -as terminal-features 'xterm*:extkeys'
+      set -g default-terminal tmux-256color
+      set -g display-time 4000
+      set -g history-limit 50000
+      set -g status-interval 5
+      set -g xterm-keys on
+      set -s escape-time 0
+      set -s extended-keys on
+      set-option -g renumber-windows on
+      setw -g mode-keys vi
     '';
   };
 }
