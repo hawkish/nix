@@ -31,7 +31,6 @@ in
     onActivation.cleanup = "uninstall";
     brews = workBrew ++ personalBrew ++ sharedBrew;
     casks = [
-      "brave-browser"
       "1Password"
     ];
   };
