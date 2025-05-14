@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 {
 
   home.file.kitty-theme = {
@@ -37,6 +37,9 @@
     font = {
       name = "JetBrainsMono Nerd Font Mono";
       size = if config.opt.features.isNixos.enable then 10 else 12;
+    };
+    settings = {
+      shell = "${pkgs.tmux}/bin/tmux a";
     };
     extraConfig = ''
       map shift+enter send_text all \x1b[13;2u

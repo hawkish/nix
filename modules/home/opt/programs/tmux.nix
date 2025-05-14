@@ -16,9 +16,6 @@
     plugins = with pkgs; [
       tmuxPlugins.better-mouse-mode
     ];
-    settings = {
-      shell = "${pkgs.tmux}/bin/tmux a";
-    };
     extraConfig = ''
 
       set -g default-terminal tmux-256color
