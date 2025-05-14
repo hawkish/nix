@@ -3,7 +3,6 @@
 
   home.file.kitty-theme = {
     enable = true;
-    baseIndex = 1;
     clock24 = true;
     keyMode = "vi";
     newSession = true;
