@@ -3,7 +3,6 @@
 
   home.file.kitty-theme = {
     enable = true;
-    clock24 = true;
     keyMode = "vi";
     newSession = true;
     shortcut = "t";
