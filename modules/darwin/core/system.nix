@@ -1,7 +1,8 @@
-{ self, ... }:
+{ self, user, ... }:
 {
   system = {
-    stateVersion = 5;
+    primaryUser = user;
+    stateVersion = 6;
     configurationRevision = self.rev or self.dirtyRev or null;
     defaults = {
       finder.AppleShowAllExtensions = true;
