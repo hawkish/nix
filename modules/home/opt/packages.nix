@@ -27,6 +27,7 @@ let
     node2nix
     age
     sops
+    swift-format
     (pnpm.override { withNode = false; })
   ];
 
