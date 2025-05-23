@@ -36,6 +36,9 @@
           ];
         };
       };
+      linters_by_ft = {
+        swift = [ "swiftlint" ]
+      };
       formatters_by_ft = {
         "_" = [ "trim_whitespace" ];
         css = [ "prettierd" ];
