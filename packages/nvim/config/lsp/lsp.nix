@@ -47,6 +47,7 @@ in
         };
         eslint.enable = true;
         sqls.enable = true;
+        sourcekit.enable = true;
         clojure_lsp = {
           enable = true;
         };
