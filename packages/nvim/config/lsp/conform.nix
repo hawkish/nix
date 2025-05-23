@@ -63,7 +63,7 @@
         vue = [ "prettierd" ];
         xml = [ "xmlformat" ];
         yaml = [ "prettierd" ];
-        swift = [ "swiftformat" ];
+        swift = [ "swift-format" ];
       };
     };
   };
