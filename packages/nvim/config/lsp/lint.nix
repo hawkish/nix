@@ -4,10 +4,10 @@
     swiftlint
   ];
 
-  plugins.nvim-lint = {
+  plugins.lint = {
     enable = true;
     settings = {
-      linters_by_ft = {
+      lintersByFt = {
         swift = [ "swiftlint" ];
       };
     };
