@@ -6,10 +6,8 @@
 
   plugins.lint = {
     enable = true;
-    settings = {
-      lintersByFt = {
-        swift = [ "swiftlint" ];
-      };
+    lintersByFt = {
+      swift = [ "swiftlint" ];
     };
   };
 }
