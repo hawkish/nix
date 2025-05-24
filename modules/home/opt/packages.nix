@@ -28,7 +28,6 @@ let
     age
     sops
     swift-format
-    #swiftlint
     (pnpm.override { withNode = false; })
   ];
 
