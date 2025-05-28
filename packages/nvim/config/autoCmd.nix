@@ -31,5 +31,17 @@
       pattern = "helm";
       command = "LspRestart";
     }
+    {
+      desc = "Set filetype for Podspec and Podfile to Ruby";
+      event = [
+        "BufNewFile"
+        "BufRead"
+      ];
+      pattern = [
+        "*.podspec"
+        "Podfile"
+      ];
+      command = "set filetype=ruby";
+    }
   ];
 }
