@@ -15,6 +15,19 @@
       text = [
         "vale"
       ];
+      nix = [
+        "nix"
+      ];
+      ruby = [
+        "ruby"
+      ];
+      eslint = [
+        "eslint"
+      ];
+      zsh = [
+        "zsh"
+      ];
+
     };
   };
   keymaps = [
