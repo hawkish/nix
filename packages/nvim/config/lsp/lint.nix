@@ -24,10 +24,6 @@
       eslint = [
         "eslint"
       ];
-      zsh = [
-        "zsh"
-      ];
-
     };
   };
   keymaps = [
