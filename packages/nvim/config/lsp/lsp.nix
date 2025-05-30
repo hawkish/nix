@@ -39,6 +39,7 @@ in
             };
         };
         jsonls.enable = true;
+        jdtls.enable = true;
         helm_ls.enable = true;
         yamlls.enable = true;
         vtsls = {
