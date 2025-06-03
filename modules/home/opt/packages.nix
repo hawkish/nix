@@ -35,12 +35,15 @@ let
     slack
   ];
 
-  private = with pkgs; [
+  personal = with pkgs; [
     claude-code # Add any private packages here
   ];
 in
 {
   home.packages =
-    commonPkgs ++ devPkgs ++ (if config.opt.features.work.enable then work else private);
+    commonPkgs
+    ++ devPkgs
+    ++ (if config.opt.features.work.enable then work else [ ])
+    ++ (if config.opt.features.personal.enable then personal else [ ]);
 
 }
