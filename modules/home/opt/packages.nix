@@ -28,6 +28,7 @@ let
     age
     sops
     swift-format
+    claude-code
     (pnpm.override { withNode = false; })
   ];
 
