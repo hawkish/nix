@@ -28,15 +28,19 @@ let
     age
     sops
     swift-format
-    claude-code
     (pnpm.override { withNode = false; })
   ];
 
   work = with pkgs; [
     slack
   ];
+
+  private = with pkgs; [
+    claude-code # Add any private packages here
+  ];
 in
 {
-  home.packages = commonPkgs ++ devPkgs ++ (if config.opt.features.work.enable then work else [ ]);
+  home.packages =
+    commonPkgs ++ devPkgs ++ (if config.opt.features.work.enable then work else private);
 
 }
