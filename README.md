@@ -30,6 +30,13 @@ nixos-rebuild switch
 nix flake update
 ```
 
+## Garbage collect
+
+```bash
+sudo darwin-rebuild --list-generations
+sudo nix-collect-garbage -d
+```
+
 # Nvim setup
 
 ## Wrong startup file
