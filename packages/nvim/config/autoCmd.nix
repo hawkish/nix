@@ -6,11 +6,14 @@
         "FocusGained"
         "TermClose"
         "TermLeave"
+        "BufEnter"
+        "CursorHold"
+        "CursorHoldI"
       ];
       callback.__raw = # lua
         ''
           function()
-              if vim.o.buftype ~= "nofile" then
+              if vim.o.buftype ~= "nofile" and vim.fn.mode() ~= 'c' then
                 vim.cmd("checktime")
               end
             end
