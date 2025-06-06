@@ -1,5 +1,10 @@
 {
-  plugins.copilot-lua = {
+  config,
+  lib,
+  ...
+}:
+{
+  plugins.copilot-lua = lib.mkIf (config.opt.features.work.enable or false) {
     enable = true;
     settings = {
       filetypes = {
