@@ -4,7 +4,7 @@
   ...
 }:
 {
-  plugins.claude-code = lib.mkIf (config.opt.features.work.personal or false) {
+  plugins.claude-code = {
     enable = true;
   };
 }
