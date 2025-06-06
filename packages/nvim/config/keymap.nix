@@ -3,6 +3,16 @@
 
   keymaps = [
 
+    # Claude
+    {
+      mode = "n";
+      key = "<leader>ac";
+      action = "<cmd>ClaudeCode<CR>";
+      options = {
+        desc = "Claude Chat";
+      };
+    }
+
     # Copilot
     {
       mode = "n";
