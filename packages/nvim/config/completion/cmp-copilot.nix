@@ -1,10 +1,11 @@
 {
   config,
   lib,
+  isWork ? false,
   ...
 }:
 {
-  plugins.copilot-lua = lib.mkIf (config.opt.features.work.enable or false) {
+  plugins.copilot-lua = lib.mkIf isWork {
     enable = true;
     settings = {
       filetypes = {

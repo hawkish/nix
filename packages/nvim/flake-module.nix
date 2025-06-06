@@ -29,27 +29,33 @@
         nvim = makeNixvimWithModule {
           pkgs = pkgsUnfree; # Use the unfree-enabled pkgs
           module = self.nixvimModules.default;
-          extraSpecialArgs = { inherit self inputs; };
+          extraSpecialArgs = { 
+            inherit self inputs; 
+            isPersonal = false;
+            isWork = false;
+          };
         };
         
         # Personal Neovim variant - with claude-code enabled
         nvim-personal = makeNixvimWithModule {
           pkgs = pkgsUnfree;
-          module = { lib, ... }: {
-            imports = [ self.nixvimModules.default ];
-            config.opt.features.personal.enable = true; 
+          module = self.nixvimModules.default;
+          extraSpecialArgs = { 
+            inherit self inputs; 
+            isPersonal = true;
+            isWork = false;
           };
-          extraSpecialArgs = { inherit self inputs; };
         };
         
-        # Work Neovim variant - without claude-code
+        # Work Neovim variant - without claude-code, with copilot
         nvim-work = makeNixvimWithModule {
           pkgs = pkgsUnfree;
-          module = { lib, ... }: {
-            imports = [ self.nixvimModules.default ];
-            config.opt.features.personal.enable = false;
+          module = self.nixvimModules.default;
+          extraSpecialArgs = { 
+            inherit self inputs; 
+            isPersonal = false;
+            isWork = true;
           };
-          extraSpecialArgs = { inherit self inputs; };
         };
       };
 

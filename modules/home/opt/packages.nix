@@ -6,10 +6,13 @@
 }:
 let
   commonPkgs = with pkgs; [
-    # Choose the appropriate Neovim variant based on the personal.enable setting
-    (if config.opt.features.personal.enable 
-     then self.packages.${pkgs.system}.nvim-personal
-     else self.packages.${pkgs.system}.nvim-work)
+    # Choose the appropriate Neovim variant based on personal.enable and work.enable
+    (if config.opt.features.personal.enable then
+      self.packages.${pkgs.system}.nvim-personal
+    else if config.opt.features.work.enable then
+      self.packages.${pkgs.system}.nvim-work
+    else
+      self.packages.${pkgs.system}.nvim)
 
     btop
     dig

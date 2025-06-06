@@ -1,10 +1,11 @@
 {
   config,
   lib,
+  isWork ? false,
   ...
 }:
 {
-  plugins.copilot-chat = lib.mkIf (config.opt.features.work.enable or false) {
+  plugins.copilot-chat = lib.mkIf isWork {
     enable = true;
   };
 }

@@ -1,10 +1,11 @@
 {
   config,
   lib,
+  isPersonal ? false,
   ...
 }:
 {
-  plugins.claude-code = lib.mkIf (config.opt.features.personal.enable) {
+  plugins.claude-code = lib.mkIf isPersonal {
     enable = true;
   };
 }
