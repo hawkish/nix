@@ -6,9 +6,6 @@
       swift = [
         "swiftlint"
       ];
-      clojure = [
-        "clj-kondo"
-      ];
       markdown = [
         "vale"
       ];
