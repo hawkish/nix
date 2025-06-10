@@ -12,6 +12,6 @@
     ./icons.nix
     ./move.nix
     ./surround.nix
-    ./trailspace.nix
+    #./trailspace.nix
   ];
 }
