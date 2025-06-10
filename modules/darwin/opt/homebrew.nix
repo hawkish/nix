@@ -23,7 +23,10 @@ let
     else
       [ ];
   personalBrew = if config.opt.features.personal.enable then [ ] else [ ];
-  sharedBrew = [ "wget" ];
+  sharedBrew = [
+    "wget"
+    "xcode-build-server"
+  ];
 in
 {
   homebrew = {
