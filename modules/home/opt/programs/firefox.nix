@@ -63,9 +63,9 @@
           name = "default";
           isDefault = true;
           settings = {
-            "browser.startup.homepage" = "https://duckduckgo.com";
-            "browser.search.defaultenginename" = "DuckDuckGo";
-            "browser.search.order.1" = "DuckDuckGo";
+            "browser.startup.homepage" = "https://google.com";
+            "browser.search.defaultenginename" = "Google";
+            "browser.search.order.1" = "Google";
             "signon.rememberSignons" = false;
             "widget.use-xdg-desktop-portal.file-picker" = 1;
             "browser.aboutConfig.showWarning" = false;
@@ -89,10 +89,10 @@
           };
           search = {
             force = true;
-            default = "ddg";
+            default = "google";
             order = [
-              "ddg"
               "google"
+              "ddg"
             ];
           };
           extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
