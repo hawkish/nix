@@ -15,6 +15,7 @@
     shell = lib.getExe pkgs.zsh;
     plugins = with pkgs; [
       tmuxPlugins.better-mouse-mode
+      tmuxPlugins.yank
     ];
     extraConfig = ''
 
