@@ -16,6 +16,7 @@
     plugins = with pkgs; [
       tmuxPlugins.better-mouse-mode
       tmuxPlugins.yank
+      tmuxPlugins.open
     ];
     extraConfig = ''
 
