@@ -36,12 +36,7 @@
           ];
         };
         google-java-format = {
-          command = "google-java-format";
-          stdin = false;
-          args = [
-            "--aosp"
-            "$FILENAME"
-          ];
+          prepend_args = [ "--aosp" ];
         };
       };
       formatters_by_ft = {
