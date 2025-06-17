@@ -35,6 +35,14 @@
             "$FILENAME"
           ];
         };
+        google-java-format = {
+          command = "google-java-format";
+          stdin = false;
+          args = [
+            "--aosp"
+            "$FILENAME"
+          ];
+        };
       };
       formatters_by_ft = {
         "_" = [ "trim_whitespace" ];
