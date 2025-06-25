@@ -1,4 +1,15 @@
 { pkgs, ... }:
+let
+  swiftFormatConfig = {
+    version = 1;
+    indentation.spaces = 4;
+    lineLength = 100;
+    maximumBlankLines = 1;
+    respectsExistingLineBreaks = true;
+    lineBreakBeforeControlFlowKeywords = false;
+    lineBreakBeforeEachArgument = false;
+  };
+in
 {
   extraPackages = with pkgs; [
     prettierd
@@ -39,11 +50,7 @@
           prepend_args = [ "--aosp" ];
         };
         swift_format = {
-          prepend_args = [ "--configuration" "${pkgs.writeText "swift-format-config.json" (builtins.toJSON {
-            indentation.spaces = 4;
-            lineLength = 100;
-            version = 1;
-          })}" ];
+          prepend_args = [ "--configuration" "${pkgs.writeText "swift-format-config.json" (builtins.toJSON swiftFormatConfig)}" ];
         };
       };
       formatters_by_ft = {
