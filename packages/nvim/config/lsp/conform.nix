@@ -39,7 +39,11 @@
           prepend_args = [ "--aosp" ];
         };
         swift_format = {
-          prepend_args = [ "--configuration" "{\"indentation\": {\"spaces\": 4}}" ];
+          prepend_args = [ "--configuration" "${pkgs.writeText "swift-format-config.json" (builtins.toJSON {
+            indentation.spaces = 4;
+            lineLength = 100;
+            version = 1;
+          })}" ];
         };
       };
       formatters_by_ft = {
