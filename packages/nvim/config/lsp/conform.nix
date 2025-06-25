@@ -38,6 +38,9 @@
         google-java-format = {
           prepend_args = [ "--aosp" ];
         };
+        swift_format = {
+          prepend_args = [ "--configuration" "{\"indentation\": {\"spaces\": 4}}" ];
+        };
       };
       formatters_by_ft = {
         "_" = [ "trim_whitespace" ];
