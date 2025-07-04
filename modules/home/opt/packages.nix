@@ -35,6 +35,12 @@ let
     sops
     swift-format
     (pnpm.override { withNode = false; })
+    
+    # Rust toolchain
+    rustc
+    cargo
+    rustfmt
+    rust-analyzer
   ];
 
   work = with pkgs; [

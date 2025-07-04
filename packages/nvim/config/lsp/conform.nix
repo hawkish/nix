@@ -81,6 +81,7 @@ in
         xml = [ "xmlformat" ];
         yaml = [ "prettierd" ];
         swift = [ "swift_format" ];
+        rust = [ "rustfmt" ];
       };
     };
   };
