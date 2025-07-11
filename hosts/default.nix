@@ -20,6 +20,10 @@
           specialArgs =
             {
               inherit inputs self;
+              pkgs-unstable = import inputs.nixpkgs-unstable {
+                system = "x86_64-linux";
+                config.allowUnfree = true;
+              };
             }
             // {
               hostname = hostname;
@@ -70,6 +74,10 @@
           specialArgs =
             {
               inherit inputs self;
+              pkgs-unstable = import inputs.nixpkgs-unstable {
+                system = "aarch64-darwin";
+                config.allowUnfree = true;
+              };
             }
             // {
               hostname = hostname;

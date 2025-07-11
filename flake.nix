@@ -3,16 +3,16 @@
 
   inputs = {
 
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    #nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
 
-    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
 
-    hm.url = "github:nix-community/home-manager";
+    hm.url = "github:nix-community/home-manager/release-25.05";
     hm.inputs.nixpkgs.follows = "nixpkgs";
 
     flake-parts.url = "github:hercules-ci/flake-parts";

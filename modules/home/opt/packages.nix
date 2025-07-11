@@ -2,6 +2,7 @@
   config,
   pkgs,
   pkgs-unstable,
+  pkgs-stable,
   self,
   ...
 }:
@@ -50,9 +51,14 @@ let
     slack
   ];
 
-  personal = with pkgs; [
-    claude-code
-  ];
+  personal =
+    with pkgs;
+    [
+    ]
+    ++ (with pkgs-unstable; [
+      # Use unstable version of claude-code
+      claude-code
+    ]);
 in
 {
   home.packages =
