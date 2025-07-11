@@ -28,6 +28,7 @@ nixos-rebuild switch
 
 ```bash
 nix flake update
+nix flake update --option access-tokens "github.com=$(gh auth token)"
 ```
 
 ## Garbage collect

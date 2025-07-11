@@ -7,12 +7,14 @@
 let
   commonPkgs = with pkgs; [
     # Choose the appropriate Neovim variant based on personal.enable and work.enable
-    (if config.opt.features.personal.enable then
-      self.packages.${pkgs.system}.nvim-personal
-    else if config.opt.features.work.enable then
-      self.packages.${pkgs.system}.nvim-work
-    else
-      self.packages.${pkgs.system}.nvim)
+    (
+      if config.opt.features.personal.enable then
+        self.packages.${pkgs.system}.nvim-personal
+      else if config.opt.features.work.enable then
+        self.packages.${pkgs.system}.nvim-work
+      else
+        self.packages.${pkgs.system}.nvim
+    )
 
     btop
     dig
@@ -35,7 +37,7 @@ let
     sops
     swift-format
     (pnpm.override { withNode = false; })
-    
+
     # Rust toolchain
     rustc
     cargo
@@ -48,7 +50,6 @@ let
   ];
 
   personal = with pkgs; [
-    claude-code # Add any private packages here
   ];
 in
 {
