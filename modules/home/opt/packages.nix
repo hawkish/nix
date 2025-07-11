@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   self,
   ...
 }:
@@ -50,6 +51,7 @@ let
   ];
 
   personal = with pkgs; [
+    claude-code
   ];
 in
 {

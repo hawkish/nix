@@ -22,12 +22,13 @@
         inherit system;
         config.allowUnfree = true;
       };
+
     in
     {
       # Run using `nix run .#nvim`
       packages = {
         nvim = makeNixvimWithModule {
-          pkgs = pkgsUnfree; # Use the unfree-enabled pkgs
+          pkgs = pkgsUnfree;
           module = self.nixvimModules.default;
           extraSpecialArgs = {
             inherit self inputs;
