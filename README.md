@@ -1,68 +1,156 @@
-# NIX setup
+# Nix Configuration Flake
 
-## Install NIX
+A comprehensive Nix configuration flake supporting multiple systems (macOS via nix-darwin and NixOS) with modular configuration management.
 
-Use the NixOS installer for MacOS. It is available [here](https://nixos.org/download.html).
-Note: Don't use Determinate Systems GUI installer for Nix on a Mac - you'll end up configuring two nix systems.
+## Features
 
-Use the NixOS installer for Linux. It is available [here](https://nixos.org/download.html).
+- **Multi-platform**: Supports x86_64-linux, aarch64-darwin, x86_64-darwin
+- **Stable + Unstable**: Uses stable nixpkgs (25.05) with unstable overlay
+- **Modular design**: Separate modules for Darwin, NixOS, and home-manager
+- **Host-specific configurations**: Individual setups for different machines
+- **Comprehensive Neovim**: Full nixvim configuration with extensive plugins
+- **Secrets management**: SOPS with age encryption per host
+- **Code quality**: Pre-commit hooks with nixfmt-rfc-style formatting
 
-Clone the NIX flakes at the home directory for Mac and /etc/nixos for NixOS.
+## Hosts
 
-## Install (and switch to) the NIX flakes on a Mac
+- **nixos**: NixOS system (user: mortenhogh)
+- **mini**: macOS system (user: mortenhogh) 
+- **laptop**: macOS system (user: mortenhogh)
+- **BDM-LW262PK2D3**: macOS work system (user: mho)
+
+## Installation
+
+### Prerequisites
+
+Install Nix using the official installer:
+- **macOS**: Use the NixOS installer from [nixos.org](https://nixos.org/download.html)
+- **Linux**: Use the NixOS installer from [nixos.org](https://nixos.org/download.html)
+
+**Note**: Don't use Determinate Systems GUI installer for Nix on macOS - you'll end up configuring two nix systems.
+
+### Clone Repository
+
+- **macOS**: Clone to `~/nix`
+- **NixOS**: Clone to `/etc/nixos`
+
+## System Setup
+
+### macOS (Darwin)
 
 ```bash
+# First time setup
 cd ~/nix
-nix run nix-darwin --extra-experimental-features nix-command --extra-experimental-features flakes -- switch --flake . (first time)
-darwin-rebuild switch --flake . (after the first time)
+nix run nix-darwin --extra-experimental-features nix-command --extra-experimental-features flakes -- switch --flake .
+
+# Subsequent rebuilds
+darwin-rebuild switch --flake .
 ```
 
-## Install (and switch to) the NIX flakes on NixOS
+### NixOS
 
 ```bash
 cd /etc/nixos
 nixos-rebuild switch
 ```
 
-## Update the NIX flakes
+## Maintenance
+
+### Update Dependencies
 
 ```bash
+# Update flake inputs
 nix flake update
+
+# Update with GitHub token for higher rate limits
 nix flake update --option access-tokens "github.com=$(gh auth token)"
 ```
 
-## Garbage collect
+### Garbage Collection
 
 ```bash
+# macOS
 sudo darwin-rebuild --list-generations
+sudo nix-collect-garbage -d
+
+# NixOS  
 sudo nix-collect-garbage -d
 ```
 
-# Nvim setup
-
-## Wrong startup file
-
-[Auto-session](https://github.com/rmagatti/auto-session) is installed. So if you bork your startup, and nvim opens a deleted file with a ton of errors, open a new file and do:
+### Development
 
 ```bash
-:SessionSave
+# Enter development shell with tools
+nix develop
+
+# Check flake
+nix flake check
+
+# Format code
+nix fmt
 ```
 
-# SOPS setup
+## SOPS Secrets Management
 
-First create a directory for SOPS configuration and generate an age key pair:
+### Initial Setup
+
+1. Create SOPS configuration directory and generate age key:
 
 ```bash
 mkdir -p ~/.config/sops/age
 age-keygen -o ~/.config/sops/age/keys.txt
 ```
 
-Next edit the .sops.yaml file to include the hostname and the public key.
+2. Add the public key to `.sops.yaml` for your hostname
 
-Next create the secrets.json file:
+3. Create and edit secrets file:
 
 ```bash
 nix-shell -p sops --run "sops secrets/[hostname]/secrets.json"
 ```
 
-... and add the secret to the file.
+### Configured Hosts
+
+The `.sops.yaml` file includes keys for:
+- **mini**: `age1mzjnjcltj9wrka2pdyzw6qcuuvkp8k6d5hdjm6435ss4zdnsyppqzd98n6`
+- **nixos**: `age1t32qkvxsxtctlg602s8fd5v7jcdcd6n9lvn9tq20ullw65wfuc7q7yn3zp`
+- **BDM-LW262PK2D3**: `age1nzxqs34s5fn7hse7t9dqr7d7mmwz0aqcjy4mcq57w570sms8332q3kxcde`
+
+## Neovim Configuration
+
+The configuration includes a comprehensive Neovim setup via nixvim with:
+- LSP support with conform and lint
+- Completion with cmp and copilot
+- Git integration with lazygit and diffview
+- UI enhancements with lualine, noice, and telescope
+- Treesitter for syntax highlighting
+- Auto-session for session management
+
+### Auto-session Recovery
+
+If Neovim opens with errors due to a corrupted session, open a new file and save the session:
+
+```bash
+:SessionSave
+```
+
+## Project Structure
+
+```
+├── flake.nix              # Main flake configuration
+├── hosts/                 # Host-specific configurations
+│   ├── nixos/            # NixOS system
+│   ├── mini/             # macOS mini
+│   ├── laptop/           # macOS laptop
+│   └── BDM-LW262PK2D3/   # macOS work system
+├── modules/               # Modular configurations
+│   ├── darwin/           # macOS modules
+│   ├── nixos/            # NixOS modules
+│   └── home/             # Home-manager modules
+├── home/                  # User-specific configurations
+├── packages/              # Custom packages
+│   ├── nvim/             # Neovim configuration
+│   └── node2nix/         # Node.js packages
+├── secrets/               # SOPS encrypted secrets
+└── pre-commit-hooks.nix   # Code quality hooks
+```
