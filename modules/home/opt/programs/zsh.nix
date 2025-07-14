@@ -30,8 +30,8 @@ let
     else
       "";
   commonContent = ''
-    # XCCommander
-    export PATH=$HOME/git/xccommander/uberscripts:$PATH
+    # RustyCommander
+    export PATH=$HOME/git/rustycommander/target/release:$PATH
   '';
 
   initContent = lib.concatStringsSep "\n" [
