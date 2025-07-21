@@ -15,8 +15,15 @@
         DisableFirefoxStudies = true;
         DisablePocket = true;
         DisableFirefoxScreenshots = true;
+        TranslateEnabled = false;
 
         Homepage.StartPage = "previous-session";
+
+        Permissions = {
+          Location = {
+            BlockNewRequests = true;
+          };
+        };
 
         FirefoxSuggest = {
           WebSuggestions = false;
