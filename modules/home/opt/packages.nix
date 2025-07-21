@@ -43,6 +43,7 @@ let
     # Rust toolchain
     rustc
     cargo
+    cargo-edit
     rustfmt
     rust-analyzer
   ];
