@@ -93,6 +93,9 @@
               }
             ];
             "extensions.ublock-origin.enabled" = true;
+            # Disable translation prompts
+            "browser.translations.enable" = false;
+            "browser.translations.automaticallyPopup" = false;
           };
           search = {
             force = true;
