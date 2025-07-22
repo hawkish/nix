@@ -1,9 +1,1 @@
-{
-  services = {
-    # ClamAV antivirus service
-    clamav = {
-      daemon.enable = true;
-      freshclam.enable = true;
-    };
-  };
-}
+{ }
