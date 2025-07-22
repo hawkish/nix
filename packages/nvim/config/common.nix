@@ -33,7 +33,7 @@
   };
   opts = {
     number = true;
-    relativenumber = true;
+    relativenumber = false;
 
     title = true;
 
