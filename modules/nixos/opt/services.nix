@@ -3,7 +3,7 @@
     # ClamAV antivirus service
     clamav = {
       daemon.enable = true;
-      freshclam.enable = true;
+      updater.enable = true;
     };
   };
 }
