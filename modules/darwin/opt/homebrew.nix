@@ -22,7 +22,13 @@ let
       ]
     else
       [ ];
-  personalBrew = if config.opt.features.personal.enable then [ ] else [ ];
+  personalBrew =
+    if config.opt.features.personal.enable then
+      [
+        "clamav"
+      ]
+    else
+      [ ];
   sharedBrew = [
     "wget"
     "xcode-build-server"
