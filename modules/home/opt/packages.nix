@@ -20,6 +20,7 @@ let
     )
 
     btop
+    clamav
     dig
     p7zip
     gh

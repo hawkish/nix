@@ -25,7 +25,6 @@ let
   personalBrew =
     if config.opt.features.personal.enable then
       [
-        "clamav"
       ]
     else
       [ ];
