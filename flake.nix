@@ -31,6 +31,9 @@
 
     mac-app-util.url = "github:hraban/mac-app-util";
 
+    fenix.url = "github:nix-community/fenix";
+    fenix.inputs.nixpkgs.follows = "nixpkgs";
+
   };
 
   outputs =
