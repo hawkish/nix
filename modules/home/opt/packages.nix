@@ -2,9 +2,7 @@
   config,
   pkgs,
   pkgs-unstable,
-  pkgs-stable,
   self,
-  inputs,
   ...
 }:
 let
@@ -41,15 +39,12 @@ let
     swift-format
     (pnpm.override { withNode = false; })
 
-    # Rust nightly toolchain with cargo-edit
-    (inputs.fenix.packages.${pkgs.system}.complete.withComponents [
-      "cargo"
-      "clippy"
-      "rust-src"
-      "rustc"
-      "rustfmt"
-      "rust-analyzer"
-    ])
+    # Rust stable toolchain
+    rustc
+    cargo
+    clippy
+    rustfmt
+    rust-analyzer
     cargo-edit
     nh
   ];
