@@ -51,6 +51,7 @@ let
       "rust-analyzer"
     ])
     cargo-edit
+    nh
   ];
 
   work = with pkgs; [
