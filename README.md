@@ -15,7 +15,7 @@ A comprehensive Nix configuration flake supporting multiple systems (macOS via n
 ## Hosts
 
 - **nixos**: NixOS system (user: mortenhogh)
-- **mini**: macOS system (user: mortenhogh) 
+- **mini**: macOS system (user: mortenhogh)
 - **laptop**: macOS system (user: mortenhogh)
 - **BDM-LW262PK2D3**: macOS work system (user: mho)
 
@@ -24,6 +24,7 @@ A comprehensive Nix configuration flake supporting multiple systems (macOS via n
 ### Prerequisites
 
 Install Nix using the official installer:
+
 - **macOS**: Use the NixOS installer from [nixos.org](https://nixos.org/download.html)
 - **Linux**: Use the NixOS installer from [nixos.org](https://nixos.org/download.html)
 
@@ -73,9 +74,11 @@ nix flake update --option access-tokens "github.com=$(gh auth token)"
 sudo darwin-rebuild --list-generations
 sudo nix-collect-garbage -d
 
-# NixOS  
+# NixOS
 sudo nix-collect-garbage -d
 ```
+
+Note: If you encounter `Operation not permitted` issues with garbage collection, you might need to add the terminal app (in this repo Kitty) to System > Privacy & Security > App Management
 
 ### Development
 
@@ -112,6 +115,7 @@ nix-shell -p sops --run "sops secrets/[hostname]/secrets.json"
 ### Configured Hosts
 
 The `.sops.yaml` file includes keys for:
+
 - **mini**: `age1mzjnjcltj9wrka2pdyzw6qcuuvkp8k6d5hdjm6435ss4zdnsyppqzd98n6`
 - **nixos**: `age1t32qkvxsxtctlg602s8fd5v7jcdcd6n9lvn9tq20ullw65wfuc7q7yn3zp`
 - **BDM-LW262PK2D3**: `age1nzxqs34s5fn7hse7t9dqr7d7mmwz0aqcjy4mcq57w570sms8332q3kxcde`
@@ -119,6 +123,7 @@ The `.sops.yaml` file includes keys for:
 ## Neovim Configuration
 
 The configuration includes a comprehensive Neovim setup via nixvim with:
+
 - LSP support with conform and lint
 - Completion with cmp and copilot
 - Git integration with lazygit and diffview
