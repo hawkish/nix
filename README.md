@@ -55,6 +55,12 @@ cd /etc/nixos
 nixos-rebuild switch
 ```
 
+### Using nh
+
+```bash
+nh switch --flake .
+```
+
 ## Maintenance
 
 ### Update Dependencies
@@ -76,6 +82,9 @@ sudo nix-collect-garbage -d
 
 # NixOS
 sudo nix-collect-garbage -d
+
+# nh
+nh clean all
 ```
 
 Note: If you encounter `Operation not permitted` issues with garbage collection, you might need to add the terminal app (in this repo Kitty) to System > Privacy & Security > App Management
