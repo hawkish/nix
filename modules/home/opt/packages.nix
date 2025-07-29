@@ -32,12 +32,17 @@ let
   ];
 
   devPkgs = with pkgs; [
+    # Node toolchain
     nodejs_22
     node2nix
+    (pnpm.override { withNode = false; })
+
+    # Nix security
     age
     sops
+
+    # Swift toolchain
     swift-format
-    (pnpm.override { withNode = false; })
 
     # Rust stable toolchain
     rustc
@@ -46,6 +51,8 @@ let
     rustfmt
     rust-analyzer
     cargo-edit
+
+    # Nix tools
     nh
   ];
 
