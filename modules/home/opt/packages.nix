@@ -49,7 +49,6 @@ let
     cargo
     clippy
     rustfmt
-    rust-analyzer
     cargo-edit
 
     # Nix tools
