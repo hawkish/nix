@@ -51,6 +51,7 @@ let
     rustfmt
     rust-analyzer
     cargo-edit
+    evcxr # For conjure Rust REPL support
 
     # Formatters for nixvim
     prettierd
