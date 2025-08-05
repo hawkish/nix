@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, helpers, ... }:
 let
   swiftFormatConfig = {
     version = 1;
@@ -53,9 +53,9 @@ in
           };
           stdin = true;
           requireCwd = true;
-          cwd.__raw = ''require("conform.util").root_file({ "gradlew" })'';
+          cwd = helpers.mkRaw ''require("conform.util").root_file({ "gradlew" })'';
           command = "./gradlew";
-          args.__raw = ''
+          args = helpers.mkRaw ''
             function()
               return {
                 "spotlessApply",
