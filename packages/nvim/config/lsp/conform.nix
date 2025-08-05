@@ -85,7 +85,7 @@ in
         # groovy = [ "npm_groovy_lint" ]; # Disabled - package not installed
         handlebars = [ "prettierd" ];
         html = [ "prettierd" ];
-        # java = [ "spotless-format" ]; # Temporarily disabled to test ENOENT
+        java = [ "spotless-format" ];
         javascript = [ "prettierd" ];
         javascriptreact = [ "prettierd" ];
         json = [ "prettierd" ];
