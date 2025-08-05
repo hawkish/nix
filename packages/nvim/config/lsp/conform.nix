@@ -79,13 +79,13 @@ in
         };
       };
       formatters_by_ft = {
-        "_" = [ "trim_whitespace" ];
+        # "_" = [ "trim_whitespace" ]; # Disabled - package not available
         css = [ "prettierd" ];
         graphql = [ "prettierd" ];
         # groovy = [ "npm_groovy_lint" ]; # Disabled - package not installed
         handlebars = [ "prettierd" ];
         html = [ "prettierd" ];
-        java = [ "spotless-format" ];
+        java = [ "spotless-format" ]; # Keep - has custom formatter defined
         javascript = [ "prettierd" ];
         javascriptreact = [ "prettierd" ];
         json = [ "prettierd" ];
@@ -103,7 +103,7 @@ in
         ];
         typescriptreact = [ "prettierd" ];
         vue = [ "prettierd" ];
-        xml = [ "xmlformat" ];
+        # xml = [ "xmlformat" ]; # Disabled - package not available
         yaml = [ "prettierd" ];
         swift = [ "swift_format" ];
         rust = [ "rustfmt" ];

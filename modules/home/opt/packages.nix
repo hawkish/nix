@@ -52,6 +52,13 @@ let
     rust-analyzer
     cargo-edit
 
+    # Formatters for nixvim
+    prettierd
+    eslint_d
+    stylua
+    shfmt
+    nixfmt-rfc-style
+
     # Nix tools
     nh
   ];
