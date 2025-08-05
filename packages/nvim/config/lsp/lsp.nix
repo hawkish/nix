@@ -71,8 +71,8 @@ in
         };
         rust_analyzer = {
           enable = true;
-          installCargo = true;
-          installRustc = true;
+          installCargo = false;
+          installRustc = false;
         };
       };
       keymaps = {
