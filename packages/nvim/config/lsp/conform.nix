@@ -82,7 +82,7 @@ in
         "_" = [ "trim_whitespace" ];
         css = [ "prettierd" ];
         graphql = [ "prettierd" ];
-        groovy = [ "npm_groovy_lint" ];
+        # groovy = [ "npm_groovy_lint" ]; # Disabled - package not installed
         handlebars = [ "prettierd" ];
         html = [ "prettierd" ];
         java = [ "spotless-format" ];
