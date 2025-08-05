@@ -46,11 +46,36 @@ in
             "$FILENAME"
           ];
         };
+        spotless-format = {
+          meta = {
+            url = "https://github.com/diffplug/spotless";
+            description = "Spotless plugin for Gradle";
+          };
+          stdin = true;
+          requireCwd = true;
+          cwd.__raw = ''require("conform.util").root_file({ "gradlew" })'';
+          command = "./gradlew";
+          args.__raw = ''
+            function()
+              return {
+                "spotlessApply",
+                "-PspotlessIdeHook=" .. vim.api.nvim_buf_get_name(0),
+                "-PspotlessIdeHookUseStdIn",
+                "-PspotlessIdeHookUseStdOut",
+                "--no-configuration-cache",
+                "--quiet",
+              }
+            end
+          '';
+        };
         google-java-format = {
           prepend_args = [ "--aosp" ];
         };
         swift_format = {
-          prepend_args = [ "--configuration" "${pkgs.writeText "swift-format-config.json" (builtins.toJSON swiftFormatConfig)}" ];
+          prepend_args = [
+            "--configuration"
+            "${pkgs.writeText "swift-format-config.json" (builtins.toJSON swiftFormatConfig)}"
+          ];
         };
       };
       formatters_by_ft = {
@@ -60,7 +85,7 @@ in
         groovy = [ "npm_groovy_lint" ];
         handlebars = [ "prettierd" ];
         html = [ "prettierd" ];
-        java = [ "google-java-format" ];
+        java = [ "spotless-format" ];
         javascript = [ "prettierd" ];
         javascriptreact = [ "prettierd" ];
         json = [ "prettierd" ];
