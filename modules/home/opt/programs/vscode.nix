@@ -28,8 +28,6 @@
         johnpapa.angular2
         angular.ng-template
         dbaeumer.vscode-eslint
-        # Clojure
-        betterthantomorrow.calva
         # JAVA_HOME
         vscjava.vscode-java-pack
         vscjava.vscode-gradle

@@ -4,9 +4,6 @@
     git
     p7zip
     jdk21
-    clojure
-    babashka
-    neil
     swiftlint
   ];
 }
