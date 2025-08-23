@@ -44,13 +44,13 @@ let
     # Swift toolchain
     swift-format
 
-    # Rust stable toolchain
-    rustc
-    cargo
-    clippy
-    rustfmt
-    rust-analyzer
-    cargo-edit
+    # Rust toolchain (using unstable to avoid macOS clippy build issues)
+    pkgs-unstable.rustc
+    pkgs-unstable.cargo
+    pkgs-unstable.clippy
+    pkgs-unstable.rustfmt
+    pkgs-unstable.rust-analyzer
+    pkgs-unstable.cargo-edit
     evcxr # For conjure Rust REPL support
 
     # Formatters for nixvim
