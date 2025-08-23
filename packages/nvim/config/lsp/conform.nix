@@ -79,7 +79,7 @@ in
         };
       };
       formatters_by_ft = {
-        # "_" = [ "trim_whitespace" ]; # Disabled - package not available
+        "_" = [ "trim_whitespace" ];
         css = [ "prettierd" ];
         graphql = [ "prettierd" ];
         # groovy = [ "npm_groovy_lint" ]; # Disabled - package not installed
@@ -107,6 +107,7 @@ in
         yaml = [ "prettierd" ];
         swift = [ "swift_format" ];
         rust = [ "rustfmt" ];
+        txt = [ "trim_whitespace" ];
       };
     };
   };
