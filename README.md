@@ -102,6 +102,20 @@ nix flake check
 nix fmt
 ```
 
+### Troubleshooting
+
+#### Pre-commit Hook Issues
+
+If you encounter errors like `.git/hooks/pre-commit: No such file or directory`, the hooks may reference outdated nix store paths:
+
+```bash
+# Remove conflicting git configuration
+git config --unset-all core.hooksPath
+
+# Reinstall hooks with current nix store paths
+nix develop --command pre-commit install
+```
+
 ## SOPS Secrets Management
 
 ### Initial Setup
