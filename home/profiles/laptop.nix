@@ -15,7 +15,7 @@
     };
     programs = {
       "1password".enable = true;
-      firefox.enable = false;
+      firefox.enable = true;
       wezterm.enable = false;
       alacritty.enable = false;
     };
