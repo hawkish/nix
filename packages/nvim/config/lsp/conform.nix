@@ -107,7 +107,6 @@ in
         yaml = [ "prettierd" ];
         swift = [ "swift_format" ];
         rust = [ "rustfmt" ];
-        txt = [ "trim_whitespace" ];
       };
     };
   };
