@@ -17,19 +17,18 @@
           user ? null,
         }:
         let
-          specialArgs =
-            {
-              inherit inputs self;
-              pkgs-unstable = import inputs.nixpkgs-unstable {
-                system = "x86_64-linux";
-                config.allowUnfree = true;
-              };
-            }
-            // {
-              hostname = hostname;
-              user = user;
-              homeDir = "/home/${user}";
+          specialArgs = {
+            inherit inputs self;
+            pkgs-unstable = import inputs.nixpkgs-unstable {
+              system = "x86_64-linux";
+              config.allowUnfree = true;
             };
+          }
+          // {
+            hostname = hostname;
+            user = user;
+            homeDir = "/home/${user}";
+          };
         in
         nixosSystem {
           inherit specialArgs;
@@ -69,24 +68,24 @@
         {
           hostname,
           user ? null,
+          system ? "aarch64-darwin",
         }:
         let
-          specialArgs =
-            {
-              inherit inputs self;
-              pkgs-unstable = import inputs.nixpkgs-unstable {
-                system = "aarch64-darwin";
-                config.allowUnfree = true;
-              };
-            }
-            // {
-              hostname = hostname;
-              user = user;
-              homeDir = "/Users/${user}";
+          specialArgs = {
+            inherit inputs self;
+            pkgs-unstable = import inputs.nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
             };
+          }
+          // {
+            hostname = hostname;
+            user = user;
+            homeDir = "/Users/${user}";
+          };
         in
         darwinSystem {
-          inherit specialArgs;
+          inherit specialArgs system;
 
           modules = default ++ [
             inputs.mac-app-util.darwinModules.default
@@ -114,14 +113,17 @@
       mini = mkHost {
         hostname = "mini";
         user = "mortenhogh";
+        system = "aarch64-darwin";
       };
       laptop = mkHost {
         hostname = "laptop";
         user = "mortenhogh";
+        system = "x86_64-darwin";
       };
       BDM-LW262PK2D3 = mkHost {
         hostname = "BDM-LW262PK2D3";
         user = "mho";
+        system = "aarch64-darwin";
       };
 
     };
