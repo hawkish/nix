@@ -12,6 +12,6 @@
       work.enable = false;
       isNixos = false;
     };
-  }:
+  };
 
 }
