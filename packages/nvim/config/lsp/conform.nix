@@ -25,7 +25,7 @@ in
     settings = {
       format_after_save = {
         lspFallback = true;
-        async = true;
+        async = false;
       };
 
       notify_on_error = true;
@@ -80,6 +80,7 @@ in
       };
       formatters_by_ft = {
         "_" = [ "trim_whitespace" ];
+        txt = { };
         css = [ "prettierd" ];
         graphql = [ "prettierd" ];
         # groovy = [ "npm_groovy_lint" ]; # Disabled - package not installed

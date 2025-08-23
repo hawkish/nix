@@ -9,9 +9,9 @@
       markdown = [
         "vale"
       ];
-      text = [
-        "vale"
-      ];
+      # text = [
+      #   "vale"
+      # ];
       nix = [
         "nix"
       ];
