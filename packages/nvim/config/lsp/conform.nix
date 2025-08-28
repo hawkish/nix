@@ -25,7 +25,7 @@ in
     settings = {
       format_after_save = {
         lspFallback = true;
-        async = false;
+        async = true;
       };
 
       notify_on_error = true;
