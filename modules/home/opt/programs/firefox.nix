@@ -9,6 +9,9 @@
   config = lib.mkIf config.opt.programs.firefox.enable {
     programs.firefox = {
       enable = true;
+      package = pkgs.firefox.overrideAttrs (_: {
+        version = "141.0.3";
+      });
       policies = {
         DontCheckDefaultBrowser = true;
         DisableTelemetry = true;
