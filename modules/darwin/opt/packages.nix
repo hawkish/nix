@@ -5,6 +5,5 @@
     p7zip
     jdk21
     swiftlint
-    firefox-bin
   ];
 }
