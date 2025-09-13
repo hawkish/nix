@@ -1,6 +1,6 @@
 keys:
   - &laptop age1asklk3k2t8nkc9vsrw7la2ehqlpxcv34eq0v086lj5ms0a7xluvqp6pelf
-  - &mini age1mzjnjcltj9wrka2pdyzw6qcuuvkp8k6d5hdjm6435ss4zdnsyppqzd98n6
+  - &mini age1c2d3nwdt6f8eng7qjp7486wyj4nj5wczsl7dzvdtgt2pty96cuvq34379s
   - &nixos age1t32qkvxsxtctlg602s8fd5v7jcdcd6n9lvn9tq20ullw65wfuc7q7yn3zp
   - &BDM-LW262PK2D3 age1nzxqs34s5fn7hse7t9dqr7d7mmwz0aqcjy4mcq57w570sms8332q3kxcde
 creation_rules:
