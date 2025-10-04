@@ -34,6 +34,7 @@
               if user != null then
                 {
                   home-manager = {
+                    useGlobalPkgs = true;
                     useUserPackages = true;
                     backupFileExtension = "backup";
                     users.${user}.imports = homeImports.${hostname};
@@ -86,6 +87,7 @@
               if user != null then
                 {
                   home-manager = {
+                    useGlobalPkgs = true;
                     useUserPackages = true;
                     backupFileExtension = "backup";
                     users.${user}.imports = homeImports.${hostname};
