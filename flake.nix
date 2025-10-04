@@ -52,14 +52,29 @@
         {
           config,
           pkgs,
+          system,
           ...
         }:
         {
+
+          _module.args.pkgs = import inputs.nixpkgs {
+            inherit system;
+            overlays = [
+              (self: _super: {
+                unstable = import inputs.nixpkgs-unstable {
+                  inherit (self) system;
+                  config.allowUnfree = true;
+                };
+              })
+            ];
+            config.allowUnfree = true;
+          };
+
           devShells.default = pkgs.mkShell {
             packages = with pkgs; [
-              pkgs.nixfmt-rfc-style
-              pkgs.git
-              pkgs.nh
+              nixfmt-rfc-style
+              git
+              nh
             ];
             name = "dots";
             DIRENV_LOG_FORMAT = "";

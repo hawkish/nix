@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  pkgs-unstable,
   self,
   ...
 }:
@@ -45,12 +44,12 @@ let
     swift-format
 
     # Rust toolchain (using unstable to avoid macOS clippy build issues)
-    pkgs-unstable.rustc
-    pkgs-unstable.cargo
-    pkgs-unstable.clippy
-    pkgs-unstable.rustfmt
-    pkgs-unstable.rust-analyzer
-    pkgs-unstable.cargo-edit
+    pkgs.unstable.rustc
+    pkgs.unstable.cargo
+    pkgs.unstable.clippy
+    pkgs.unstable.rustfmt
+    pkgs.unstable.rust-analyzer
+    pkgs.unstable.cargo-edit
     evcxr # For conjure Rust REPL support
 
     # Formatters for nixvim
@@ -66,13 +65,14 @@ let
 
   work = with pkgs; [
     slack
+    x3270
   ];
 
   personal =
     with pkgs;
     [
     ]
-    ++ (with pkgs-unstable; [
+    ++ (with pkgs.unstable; [
       # Use unstable version of claude-code
       claude-code
     ]);
