@@ -10,6 +10,6 @@
     ./todo-commnets.nix
     ./lazygit.nix
     ./toggleterm.nix
-    ./rest.nix
+    ./kulala.nix
   ];
 }
