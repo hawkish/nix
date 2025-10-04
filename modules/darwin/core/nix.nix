@@ -9,6 +9,7 @@
           config.allowUnfree = true;
         };
       })
+      inputs.nix-vscode-extensions.overlays.default
     ];
   };
   nix = {
