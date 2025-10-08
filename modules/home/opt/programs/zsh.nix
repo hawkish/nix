@@ -1,5 +1,6 @@
 {
   config,
+  pkgs,
   lib,
   ...
 }:
@@ -8,16 +9,19 @@ let
     if config.opt.features.work.enable then
       ''
         # Ruby gem installation
-          export GEM_HOME="$HOME/.gem"
-          export GEM_PATH="$HOME/.gem"
-          export PATH=$GEM_HOME/bin:$PATH
+        export GEM_HOME="$HOME/.gem"
+        export GEM_PATH="$HOME/.gem"
+        export PATH=$GEM_HOME/bin:$PATH
 
-          # Chruby installation
-          # enable chruby and select Ruby version
-          source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
-          source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
-          # chruby ruby-3.1.2
-          chruby 3.4.2
+        # Chruby installation
+        # enable chruby and select Ruby version
+        source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+        source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+        # chruby ruby-3.1.2
+        chruby 3.4.2
+
+        # X3270 installation
+        export PATH=${pkgs.x3270}/bin:$PATH
       ''
     else
       "";

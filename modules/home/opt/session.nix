@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   homeDir,
   ...
@@ -19,6 +18,5 @@
     "$HOME/bin"
     "$HOME/.nix-profile/bin"
     "/opt/homebrew/bin"
-  ]
-  ++ (if config.opt.features.work.enable then [ "${pkgs.x3270}" ] else [ ]);
+  ];
 }
