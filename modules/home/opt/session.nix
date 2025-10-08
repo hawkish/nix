@@ -1,20 +1,24 @@
-{ pkgs, homeDir, ... }:
 {
-  home = {
-    sessionVariables = {
-      EDITOR = "nvim";
-      VISUAL = "nvim";
-      JAVA_HOME = "${pkgs.jdk21.home}";
-      GEM_HOME = "$HOME/.gem";
-      GEM_PATH = "$HOME/.gem";
-      SOPS_AGE_KEY_FILE = "${homeDir}/.config/sops/age/keys.txt";
-    };
-    sessionPath = [
-      "$GEM_HOME/bin"
-      "$HOME/.local/bin"
-      "$HOME/bin"
-      "$HOME/.nix-profile/bin"
-      "/opt/homebrew/bin"
-    ];
+  config,
+  pkgs,
+  homeDir,
+  ...
+}:
+{
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    JAVA_HOME = "${pkgs.jdk21.home}";
+    GEM_HOME = "$HOME/.gem";
+    GEM_PATH = "$HOME/.gem";
+    SOPS_AGE_KEY_FILE = "${homeDir}/.config/sops/age/keys.txt";
   };
+  home.sessionPath = [
+    "$GEM_HOME/bin"
+    "$HOME/.local/bin"
+    "$HOME/bin"
+    "$HOME/.nix-profile/bin"
+    "/opt/homebrew/bin"
+  ]
+  ++ (if config.opt.features.work.enable then [ "${pkgs.x3270}" ] else [ ]);
 }
