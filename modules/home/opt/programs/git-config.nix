@@ -36,6 +36,7 @@
       git = {
         enable = true;
         extraConfig = {
+          merge.tool = "nvimdiff";
           mergetool.nvimdiff = {
             layout = "LOCAL,BASE,REMOTE / MERGED";
           };
