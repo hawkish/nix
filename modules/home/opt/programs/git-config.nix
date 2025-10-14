@@ -35,6 +35,11 @@
     programs = {
       git = {
         enable = true;
+        extraConfig = {
+          mergetool.nvimdiff = {
+            layout = "LOCAL,BASE,REMOTE / MERGED";
+          };
+        };
         includes = (
           if config.opt.features.work.enable then
             [
