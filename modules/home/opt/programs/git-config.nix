@@ -35,12 +35,25 @@
     programs = {
       git = {
         enable = true;
-        extraConfig = {
-          merge.tool = "nvimdiff";
-          mergetool.nvimdiff = {
-            layout = "LOCAL,BASE,REMOTE / MERGED";
-          };
-        };
+        extraConfig = lib.mkMerge [
+          {
+            merge.tool = "nvimdiff";
+            mergetool.nvimdiff = {
+              layout = "LOCAL,BASE,REMOTE / MERGED";
+            };
+          }
+          (lib.mkIf config.opt.features.work.enable {
+            core = {
+              autocrlf = "input";
+            };
+            credential = {
+              "https://git.bankdata.eficode.io" = {
+                provider = "bitbucket";
+              };
+            };
+
+          })
+        ];
         includes = (
           if config.opt.features.work.enable then
             [
