@@ -25,6 +25,7 @@ let
     jq
     yq
     ripgrep
+    zoxide
 
     lazygit
 
