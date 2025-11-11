@@ -69,7 +69,7 @@ in
         grp = "git remote prune origin";
         gp = "git push";
       };
-      initExtra = initContent;
+      initContent = initContent;
       oh-my-zsh = {
         enable = true;
         plugins = [
