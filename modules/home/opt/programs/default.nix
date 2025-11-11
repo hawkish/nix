@@ -9,5 +9,6 @@
     ./tmux.nix
     ./kitty.nix
     ./vscode.nix
+    ./zoxide.nix
   ];
 }
