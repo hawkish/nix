@@ -6,9 +6,7 @@
     ./firefox.nix
     ./zsh.nix
     ./git-config.nix
-    ./tmux.nix
     ./kitty.nix
     ./vscode.nix
-    ./zoxide.nix
   ];
 }
