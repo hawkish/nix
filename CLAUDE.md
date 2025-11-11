@@ -54,6 +54,10 @@ nix flake update
 sudo darwin-rebuild --list-generations
 sudo nix-collect-garbage -d
 
+# After garbage collection, reinstall pre-commit hooks
+# (hooks contain hardcoded Nix store paths that get removed during GC)
+nix develop
+
 # Format Nix files
 nix fmt
 ```
