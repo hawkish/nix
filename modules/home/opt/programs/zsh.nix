@@ -34,6 +34,10 @@ let
     else
       "";
   commonContent = ''
+    JAVA_HOME_17 = "${pkgs.jdk17.home}";
+    JAVA_HOME_21 = "${pkgs.jdk21.home}";
+    JAVA_HOME = "${pkgs.jdk21.home}";
+
     # RustyCommander
     export PATH=$HOME/git/rustycommander/target/release:$PATH
   '';
