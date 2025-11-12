@@ -35,9 +35,9 @@ let
       "";
   commonContent = ''
     # Java installation
-    export JAVA_HOME_17 = "${pkgs.jdk17.home}";
-    export JAVA_HOME_21 = "${pkgs.jdk21.home}";
-    export JAVA_HOME = "${pkgs.jdk21.home}";
+    export JAVA_HOME_17="${pkgs.jdk17.home}"
+    export JAVA_HOME_21="${pkgs.jdk21.home}"
+    export JAVA_HOME="${pkgs.jdk21.home}"
     export PATH=$JAVA_HOME/bin:$PATH
 
     # RustyCommander
