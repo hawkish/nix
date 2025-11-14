@@ -42,6 +42,8 @@
       shell = "${pkgs.tmux}/bin/tmux a";
     };
     extraConfig = ''
+      initial_window_width 670
+      initial_window_height 400
       map shift+enter send_text all \x1b[13;2u
     '';
   };
