@@ -63,8 +63,7 @@ in
       gp = "git push";
     };
 
-    # Use initExtra (standard option) instead of initContent
-    initExtra = lib.concatStringsSep "\n" [
+    initContent = lib.concatStringsSep "\n" [
       workContent
       personalContent
       commonContent
